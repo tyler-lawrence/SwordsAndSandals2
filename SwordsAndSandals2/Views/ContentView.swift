@@ -16,11 +16,9 @@ struct ContentView: View {
     var body: some View {
         switch gameManager.gameState {
         case .tutorial:
-//            CombatView(cm: CombatManager(player: gameManager.player, enemy: Character.prisoner))
-            Text("test")
+            CombatView(cm: CombatManager(player: player, enemy: GameCharacter.prisoner))
         case .combat(let enemy):
-//            CombatView(cm: CombatManager(player: gameManager.player, enemy: enemy))
-            Text("test")
+            CombatView(cm: CombatManager(player: player, enemy: enemy))
         case .main:
             TownView()
             
@@ -28,11 +26,9 @@ struct ContentView: View {
 //            ShopView()
             Text("test")
         case .levelUp:
-//            LevelUpView()
-            Text("test")
+            LevelUpView(gameManager: gameManager)
         case .transition:
-//            TransitionView()
-            Text("test")
+            TransitionView()
         }
         
     }

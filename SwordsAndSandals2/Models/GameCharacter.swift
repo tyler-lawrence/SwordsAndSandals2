@@ -111,35 +111,54 @@ final class GameCharacter: Codable {
     //        }
     //        gold -= item.price
     //    }
-    //
-    //    func attemptAttack(using combatAction: CombatAction) -> Bool {
-    //        let attackRoll: Double = Double.random(in: 0.0 ... 1.0)
-    //        let attackHit: Bool = attackRoll < combatAction.accuracy
-    //
-    //        return attackHit
-    //    }
-    //
-    //    func attack(_ enemy: Character, using combatAction: CombatAction)  -> Int? {
-    //        guard attemptAttack(using: combatAction) else {
-    //            return nil
-    //        }
-    //        let attackPower: Int = getTotalStat(for: combatAction.stat)
-    //        let enemyDefense: Int = switch combatAction.stat{
-    //        case .magic:
-    //            enemy.getTotalStat(for: .magicResist)
-    //        default:
-    //            enemy.getTotalStat(for: .armor)
-    //        }
-    //
-    //        let damageModifier: Double = combatAction.damageModifier
-    //        let premitigationDamage: Double = Double(attackPower) * damageModifier
-    //        let totalDamage: Int = max(0, Int(premitigationDamage) - enemyDefense)
-    //        enemy.currentHealth -= totalDamage
-    //        return totalDamage
-    //    }
+    
+        func attemptAttack(using combatAction: CombatAction) -> Bool {
+            let attackRoll: Double = Double.random(in: 0.0 ... 1.0)
+            let attackHit: Bool = attackRoll < combatAction.accuracy
+    
+            return attackHit
+        }
+    
+        func attack(_ enemy: GameCharacter, using combatAction: CombatAction)  -> Int? {
+            guard attemptAttack(using: combatAction) else {
+                return nil
+            }
+            let attackPower: Int = getTotalStat(for: combatAction.stat)
+            let enemyDefense: Int = switch combatAction.stat{
+            case .magic:
+                enemy.getTotalStat(for: .magicResist)
+            default:
+                enemy.getTotalStat(for: .armor)
+            }
+    
+            let damageModifier: Double = combatAction.damageModifier
+            let premitigationDamage: Double = Double(attackPower) * damageModifier
+            let totalDamage: Int = max(0, Int(premitigationDamage) - enemyDefense)
+            enemy.currentHealth -= totalDamage
+            return totalDamage
+        }
     
 }
-
+#if DEBUG
 extension GameCharacter {
     static let sample = GameCharacter(name: "Sample", maxHealth: 10)
+    
+    static var sampleDeadCharacter: GameCharacter {
+        let c = GameCharacter(
+            name: "dead",
+            maxHealth: 10
+        )
+        c.currentHealth = 0
+        return c
+    }
+    
+    static var sampleInjuredCharacter: GameCharacter {
+        let c = GameCharacter(
+            name: "Injured",
+            maxHealth: 10
+        )
+        c.currentHealth = 5
+        return c
+    }
 }
+#endif

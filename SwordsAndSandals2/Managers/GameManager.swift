@@ -27,14 +27,14 @@ final class GameManager: Identifiable, Codable {
     }
     
     
-//    func newWeakCharacter() -> Character {
-//        let c = GameCharacter(name: "local punk", maxHealth: 10)
-////        let preferredStat: StatType = c.attackPreference().stat
-////        c.baseStats[preferredStat] = 3
-////        c.inventory.weapon = Weapon.stick
-////        c.bodyColor = Color.randomColor()
-//        return c
-//    }
+    func newWeakCharacter() -> GameCharacter {
+        let c = GameCharacter(name: "local punk", maxHealth: 10)
+        let preferredStat: StatType = c.attackPreference().stat
+        c.baseStats[preferredStat] = 3
+//        c.inventory.weapon = Weapon.stick
+//        c.bodyColor = Color.randomColor()
+        return c
+    }
 }
 
 #if DEBUG

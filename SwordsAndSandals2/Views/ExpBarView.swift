@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExpBarView: View {
-    var player: GameCharacter
+    let player: GameCharacter
     
     var expPercent: Double {
         player.currentExperience / player.experienceNeededToLevel

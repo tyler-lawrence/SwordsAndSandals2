@@ -23,6 +23,12 @@ struct TownView: View {
                     }
                 Spacer()
             }
+            Button{
+                let enemy = gameManager.newWeakCharacter()
+                gameManager.gameState = .combat(enemy)
+            } label: {
+                Text("Combat")
+            }
             Spacer()
         }
         .sheet(isPresented: $showingPlayerDetailsSheet){
