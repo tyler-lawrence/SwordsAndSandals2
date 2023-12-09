@@ -11,6 +11,13 @@
 		5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */; };
 		5B95EDD82B1FFD67002E7CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */; };
 		5B95EDDC2B1FFD67002E7CD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95EDDB2B1FFD67002E7CD2 /* Preview Assets.xcassets */; };
+		5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */; };
+		5B95EDE52B1FFDE8002E7CD2 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */; };
+		5B95EDE82B1FFE75002E7CD2 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDE72B1FFE75002E7CD2 /* GameCharacter.swift */; };
+		5B95EDEA2B1FFECC002E7CD2 /* StatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDE92B1FFECC002E7CD2 /* StatType.swift */; };
+		5B95EDEC2B1FFF92002E7CD2 /* GameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */; };
+		5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDED2B2000E3002E7CD2 /* GameState.swift */; };
+		5B95EDF02B2001D1002E7CD2 /* CharacterCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B95EDD92B1FFD67002E7CD2 /* SwordsAndSandals2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwordsAndSandals2.entitlements; sourceTree = "<group>"; };
 		5B95EDDB2B1FFD67002E7CD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		5B95EDE72B1FFE75002E7CD2 /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
+		5B95EDE92B1FFECC002E7CD2 /* StatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatType.swift; sourceTree = "<group>"; };
+		5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionView.swift; sourceTree = "<group>"; };
+		5B95EDED2B2000E3002E7CD2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */,
-				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
+				5B95EDF22B200327002E7CD2 /* Models */,
+				5B95EDF12B200319002E7CD2 /* Views */,
+				5B95EDE62B1FFE50002E7CD2 /* Managers */,
 				5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */,
 				5B95EDD92B1FFD67002E7CD2 /* SwordsAndSandals2.entitlements */,
 				5B95EDDA2B1FFD67002E7CD2 /* Preview Content */,
@@ -67,6 +83,35 @@
 				5B95EDDB2B1FFD67002E7CD2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5B95EDE62B1FFE50002E7CD2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */,
+				5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5B95EDF12B200319002E7CD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
+				5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */,
+				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B95EDF22B200327002E7CD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B95EDED2B2000E3002E7CD2 /* GameState.swift */,
+				5B95EDE72B1FFE75002E7CD2 /* GameCharacter.swift */,
+				5B95EDE92B1FFECC002E7CD2 /* StatType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B95EDE82B1FFE75002E7CD2 /* GameCharacter.swift in Sources */,
+				5B95EDEA2B1FFECC002E7CD2 /* StatType.swift in Sources */,
+				5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */,
+				5B95EDF02B2001D1002E7CD2 /* CharacterCreationView.swift in Sources */,
+				5B95EDEC2B1FFF92002E7CD2 /* GameSelectionView.swift in Sources */,
+				5B95EDE52B1FFDE8002E7CD2 /* GameManager.swift in Sources */,
+				5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,
 				5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */,
 			);

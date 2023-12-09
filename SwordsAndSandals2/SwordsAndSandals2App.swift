@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SwordsAndSandals2App: App {
+    @State private var appManager = AppManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameSelectionView()
+                .environment(appManager)
         }
     }
 }
