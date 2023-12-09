@@ -23,8 +23,7 @@ struct ContentView: View {
             TownView()
             
         case .shop:
-//            ShopView()
-            Text("test")
+            ShopView()
         case .levelUp:
             LevelUpView(gameManager: gameManager)
         case .transition:

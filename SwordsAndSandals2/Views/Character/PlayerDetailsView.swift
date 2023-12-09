@@ -9,6 +9,14 @@ import SwiftUI
 
 struct PlayerDetailsView: View {
     @Environment(GameCharacter.self) var player
+    
+    enum DetailOptions: String, CaseIterable {
+        case stats = "Stats"
+        case inventory = "Inventory"
+    }
+    
+    @State private var selection: DetailOptions = .inventory
+    
     var body: some View {
         VStack{
             // header
@@ -26,17 +34,34 @@ struct PlayerDetailsView: View {
                     
                 }
                 ExpBarView(player: player)
+                Picker("", selection: $selection){
+                    ForEach(DetailOptions.allCases, id: \.self) {
+                        Text($0.rawValue)
+                    }
+                }
             }
             .padding()
             .background(.bar)
             Spacer()
             
-            CharacterView()
-            StatsView(stats: player.totalStats)
-                .padding(.horizontal)
+            if selection == .stats {
+                CharacterView()
+                StatsView(stats: player.totalStats)
+                    .padding(.horizontal)
+            } else {
+                InventoryView
+            }
+            
+            
             Spacer()
         }
         
+    }
+    
+    var InventoryView: some View {
+        ForEach(player.inventory.allItems){ item in
+                ItemDetailView(item: item)
+        }
     }
 }
 

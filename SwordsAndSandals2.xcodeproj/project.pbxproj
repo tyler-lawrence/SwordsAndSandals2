@@ -37,6 +37,13 @@
 		5B6328142B24E03300B2848A /* LevelUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328132B24E03300B2848A /* LevelUpView.swift */; };
 		5B6328162B24E03D00B2848A /* LevelUpAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328152B24E03D00B2848A /* LevelUpAnimation.swift */; };
 		5B6328182B24E19700B2848A /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328172B24E19700B2848A /* TransitionView.swift */; };
+		5B6328202B24E65200B2848A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63281F2B24E65200B2848A /* Item.swift */; };
+		5B6328232B24E70B00B2848A /* ItemSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328222B24E70B00B2848A /* ItemSlot.swift */; };
+		5B6328252B24E78900B2848A /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328242B24E78900B2848A /* Inventory.swift */; };
+		5B6328282B24E9DA00B2848A /* InventoryIconCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */; };
+		5B63282A2B24EA2700B2848A /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328292B24EA2700B2848A /* ItemDetailView.swift */; };
+		5B63282C2B24EB2300B2848A /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63282B2B24EB2300B2848A /* Shop.swift */; };
+		5B63282E2B24EB9B00B2848A /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63282D2B24EB9B00B2848A /* ShopView.swift */; };
 		5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */; };
 		5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */; };
 		5B95EDD82B1FFD67002E7CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */; };
@@ -65,7 +72,7 @@
 		5B6327F12B24D88900B2848A /* Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Intro.mp3; sourceTree = "<group>"; };
 		5B6327F32B24D8B700B2848A /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		5B6327F62B24DA6100B2848A /* CombatAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatAction.swift; sourceTree = "<group>"; };
-		5B6327F82B24DA9000B2848A /* CombatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CombatManager.swift; path = SwordsAndSandals2/Models/CombatManager.swift; sourceTree = SOURCE_ROOT; };
+		5B6327F82B24DA9000B2848A /* CombatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CombatManager.swift; path = SwordsAndSandals2/Managers/CombatManager.swift; sourceTree = SOURCE_ROOT; };
 		5B6327FA2B24DB1100B2848A /* GameCharacter+NPCs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameCharacter+NPCs.swift"; sourceTree = "<group>"; };
 		5B6327FC2B24DBB500B2848A /* CombatActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatActionView.swift; sourceTree = "<group>"; };
 		5B6327FE2B24DBED00B2848A /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -81,6 +88,13 @@
 		5B6328132B24E03300B2848A /* LevelUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpView.swift; sourceTree = "<group>"; };
 		5B6328152B24E03D00B2848A /* LevelUpAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpAnimation.swift; sourceTree = "<group>"; };
 		5B6328172B24E19700B2848A /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		5B63281F2B24E65200B2848A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5B6328222B24E70B00B2848A /* ItemSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSlot.swift; sourceTree = "<group>"; };
+		5B6328242B24E78900B2848A /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryIconCircleView.swift; sourceTree = "<group>"; };
+		5B6328292B24EA2700B2848A /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		5B63282B2B24EB2300B2848A /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		5B63282D2B24EB9B00B2848A /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		5B95EDD02B1FFD66002E7CD2 /* SwordsAndSandals2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwordsAndSandals2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordsAndSandals2App.swift; sourceTree = "<group>"; };
 		5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +193,7 @@
 		5B63281D2B24E43F00B2848A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				5B63282D2B24EB9B00B2848A /* ShopView.swift */,
 				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
 				5B6327E02B24D05B00B2848A /* TownView.swift */,
 				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
@@ -192,6 +207,15 @@
 				5B6327EC2B24D81100B2848A /* Audio */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		5B6328262B24E9C300B2848A /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */,
+				5B6328292B24EA2700B2848A /* ItemDetailView.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		5B95EDC72B1FFD66002E7CD2 = {
@@ -236,6 +260,7 @@
 		5B95EDE62B1FFE50002E7CD2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
 				5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */,
 				5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */,
 			);
@@ -245,6 +270,7 @@
 		5B95EDF12B200319002E7CD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B6328262B24E9C300B2848A /* Item */,
 				5B63281D2B24E43F00B2848A /* Navigation */,
 				5B6328082B24DDF700B2848A /* Modifiers */,
 				5B63281C2B24E41C00B2848A /* Animation */,
@@ -263,7 +289,10 @@
 				5B6327FA2B24DB1100B2848A /* GameCharacter+NPCs.swift */,
 				5B95EDE92B1FFECC002E7CD2 /* StatType.swift */,
 				5B6327F62B24DA6100B2848A /* CombatAction.swift */,
-				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
+				5B63281F2B24E65200B2848A /* Item.swift */,
+				5B6328242B24E78900B2848A /* Inventory.swift */,
+				5B6328222B24E70B00B2848A /* ItemSlot.swift */,
+				5B63282B2B24EB2300B2848A /* Shop.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +372,8 @@
 			files = (
 				5B6327E32B24D09100B2848A /* PlayerSummaryView.swift in Sources */,
 				5B6328122B24DF2E00B2848A /* GameOverView.swift in Sources */,
+				5B6328202B24E65200B2848A /* Item.swift in Sources */,
+				5B6328252B24E78900B2848A /* Inventory.swift in Sources */,
 				5B95EDE82B1FFE75002E7CD2 /* GameCharacter.swift in Sources */,
 				5B6327E92B24D54000B2848A /* PlayerDetailsView.swift in Sources */,
 				5B95EDEA2B1FFECC002E7CD2 /* StatType.swift in Sources */,
@@ -350,8 +381,10 @@
 				5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */,
 				5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */,
 				5B6328102B24DEDC00B2848A /* PostCombatView.swift in Sources */,
+				5B63282A2B24EA2700B2848A /* ItemDetailView.swift in Sources */,
 				5B6328072B24DDE600B2848A /* LivingCharacter.swift in Sources */,
 				5B6327EB2B24D80E00B2848A /* BackgroundAudio.swift in Sources */,
+				5B6328232B24E70B00B2848A /* ItemSlot.swift in Sources */,
 				5B6328142B24E03300B2848A /* LevelUpView.swift in Sources */,
 				5B6327F92B24DA9000B2848A /* CombatManager.swift in Sources */,
 				5B6328162B24E03D00B2848A /* LevelUpAnimation.swift in Sources */,
@@ -368,13 +401,16 @@
 				5B6327E72B24D4CA00B2848A /* ExpBarView.swift in Sources */,
 				5B95EDE52B1FFDE8002E7CD2 /* GameManager.swift in Sources */,
 				5B6327FB2B24DB1100B2848A /* GameCharacter+NPCs.swift in Sources */,
+				5B63282E2B24EB9B00B2848A /* ShopView.swift in Sources */,
 				5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */,
 				5B63280E2B24DEBB00B2848A /* CombatView.swift in Sources */,
 				5B6327E12B24D05B00B2848A /* TownView.swift in Sources */,
 				5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */,
 				5B6327E52B24D2F000B2848A /* CharacterView.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,
+				5B6328282B24E9DA00B2848A /* InventoryIconCircleView.swift in Sources */,
 				5B6327F72B24DA6100B2848A /* CombatAction.swift in Sources */,
+				5B63282C2B24EB2300B2848A /* Shop.swift in Sources */,
 				5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */,
 				5B6327F42B24D8B700B2848A /* SoundEffect.swift in Sources */,
 			);

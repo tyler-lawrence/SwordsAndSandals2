@@ -35,7 +35,7 @@ struct ExpBarView: View {
 }
 
 #Preview {
-    var player = GameCharacter.sample
+    let player = GameCharacter.sample
     player.currentExperience = 1
     return ExpBarView(player: player)
 }

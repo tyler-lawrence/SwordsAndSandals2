@@ -47,6 +47,7 @@ extension GameCharacter {
             .agility: 1,
             .magic: 1,
             .armor: 2
-        ]
+        ],
+        inventory: Inventory()
     )
 }

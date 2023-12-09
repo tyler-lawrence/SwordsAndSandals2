@@ -16,7 +16,7 @@ final class GameCharacter: Codable {
     var currentHealth: Int
     var gold: Int = 0
     //    var bodyColor: Color = .blue
-    //    var inventory: Inventory = Inventory()
+    var inventory: Inventory
     var skillPointsAvailable: Int = 4
     var level: Int = 1
     
@@ -51,22 +51,20 @@ final class GameCharacter: Codable {
         self.currentHealth = maxHealth
         self.maxHealth = maxHealth
         self.baseStats = StatType.baseStatBlock
-        //        self.bodyColor = bodyColor
+        self.inventory = Inventory()
     }
     
     init(
         name: String,
         maxHealth: Int,
-        stats: StatDictionary
-        //        bodyColor: Color,
-        //        inventory: Inventory
+        stats: StatDictionary,
+        inventory: Inventory
     ){
         self.name = name
         self.currentHealth = maxHealth
         self.maxHealth = maxHealth
         self.baseStats = stats
-        //        self.bodyColor = bodyColor
-        //        self.inventory = Inventory()
+        self.inventory = Inventory()
     }
     
     init(from decoder: Decoder) throws {
@@ -79,64 +77,46 @@ final class GameCharacter: Codable {
         self._level = try container.decode(Int.self, forKey: ._level)
         self._currentExperience = try container.decode(Double.self, forKey: ._currentExperience)
         self._baseStats = try container.decode(StatDictionary.self, forKey: ._baseStats)
+        self._inventory = try container.decode(Inventory.self, forKey: ._inventory)
     }
     
     func getTotalStat(for stat: StatType) -> Int {
         let base = baseStats[stat] ?? 0
-        //        let bonus = inventory.getBonusStats(for: stat)
-        //        return base + bonus
-        return base
+        let bonus = inventory.getBonusStats(for: stat)
+        return base + bonus
     }
     
-    //    func buy(_ item: any Purchasable) {
-    //        guard gold >= item.price else { return }
-    //
-    //        switch item.itemSlot {
-    //        case .head:
-    //            if let headArmor = item as? Armor {
-    //                inventory.headArmor = headArmor
-    //            }
-    //        case .torso:
-    //            if let torsoArmor = item as? Armor {
-    //                inventory.torsoArmor = torsoArmor
-    //            }
-    //        case .legs:
-    //            if let legArmor = item as? Armor {
-    //                inventory.legArmor = legArmor
-    //            }
-    //        case .weapon:
-    //            if let weapon = item as? Weapon {
-    //                inventory.weapon = weapon
-    //            }
-    //        }
-    //        gold -= item.price
-    //    }
+    func buy(_ item: Item) {
+        guard gold >= item.price else { return }
+        inventory.allItems.append(item)
+        gold -= item.price
+    }
     
-        func attemptAttack(using combatAction: CombatAction) -> Bool {
-            let attackRoll: Double = Double.random(in: 0.0 ... 1.0)
-            let attackHit: Bool = attackRoll < combatAction.accuracy
+    func attemptAttack(using combatAction: CombatAction) -> Bool {
+        let attackRoll: Double = Double.random(in: 0.0 ... 1.0)
+        let attackHit: Bool = attackRoll < combatAction.accuracy
+        
+        return attackHit
+    }
     
-            return attackHit
+    func attack(_ enemy: GameCharacter, using combatAction: CombatAction)  -> Int? {
+        guard attemptAttack(using: combatAction) else {
+            return nil
         }
-    
-        func attack(_ enemy: GameCharacter, using combatAction: CombatAction)  -> Int? {
-            guard attemptAttack(using: combatAction) else {
-                return nil
-            }
-            let attackPower: Int = getTotalStat(for: combatAction.stat)
-            let enemyDefense: Int = switch combatAction.stat{
-            case .magic:
-                enemy.getTotalStat(for: .magicResist)
-            default:
-                enemy.getTotalStat(for: .armor)
-            }
-    
-            let damageModifier: Double = combatAction.damageModifier
-            let premitigationDamage: Double = Double(attackPower) * damageModifier
-            let totalDamage: Int = max(0, Int(premitigationDamage) - enemyDefense)
-            enemy.currentHealth -= totalDamage
-            return totalDamage
+        let attackPower: Int = getTotalStat(for: combatAction.stat)
+        let enemyDefense: Int = switch combatAction.stat{
+        case .magic:
+            enemy.getTotalStat(for: .magicResist)
+        default:
+            enemy.getTotalStat(for: .armor)
         }
+        
+        let damageModifier: Double = combatAction.damageModifier
+        let premitigationDamage: Double = Double(attackPower) * damageModifier
+        let totalDamage: Int = max(0, Int(premitigationDamage) - enemyDefense)
+        enemy.currentHealth -= totalDamage
+        return totalDamage
+    }
     
 }
 #if DEBUG
