@@ -12,6 +12,14 @@
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
 		5B6327E12B24D05B00B2848A /* TownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E02B24D05B00B2848A /* TownView.swift */; };
 		5B6327E32B24D09100B2848A /* PlayerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */; };
+		5B6327E52B24D2F000B2848A /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E42B24D2F000B2848A /* CharacterView.swift */; };
+		5B6327E72B24D4CA00B2848A /* ExpBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E62B24D4CA00B2848A /* ExpBarView.swift */; };
+		5B6327E92B24D54000B2848A /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E82B24D54000B2848A /* PlayerDetailsView.swift */; };
+		5B6327EB2B24D80E00B2848A /* BackgroundAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327EA2B24D80E00B2848A /* BackgroundAudio.swift */; };
+		5B6327EF2B24D82B00B2848A /* death.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B6327ED2B24D82B00B2848A /* death.mp3 */; };
+		5B6327F02B24D82B00B2848A /* LevelUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B6327EE2B24D82B00B2848A /* LevelUp.mp3 */; };
+		5B6327F22B24D88900B2848A /* Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B6327F12B24D88900B2848A /* Intro.mp3 */; };
+		5B6327F42B24D8B700B2848A /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327F32B24D8B700B2848A /* SoundEffect.swift */; };
 		5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */; };
 		5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */; };
 		5B95EDD82B1FFD67002E7CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */; };
@@ -31,6 +39,14 @@
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
 		5B6327E02B24D05B00B2848A /* TownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownView.swift; sourceTree = "<group>"; };
 		5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSummaryView.swift; sourceTree = "<group>"; };
+		5B6327E42B24D2F000B2848A /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterView.swift; path = SwordsAndSandals2/Views/CharacterView.swift; sourceTree = SOURCE_ROOT; };
+		5B6327E62B24D4CA00B2848A /* ExpBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpBarView.swift; sourceTree = "<group>"; };
+		5B6327E82B24D54000B2848A /* PlayerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
+		5B6327EA2B24D80E00B2848A /* BackgroundAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAudio.swift; sourceTree = "<group>"; };
+		5B6327ED2B24D82B00B2848A /* death.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = death.mp3; sourceTree = "<group>"; };
+		5B6327EE2B24D82B00B2848A /* LevelUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LevelUp.mp3; sourceTree = "<group>"; };
+		5B6327F12B24D88900B2848A /* Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Intro.mp3; sourceTree = "<group>"; };
+		5B6327F32B24D8B700B2848A /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		5B95EDD02B1FFD66002E7CD2 /* SwordsAndSandals2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwordsAndSandals2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordsAndSandals2App.swift; sourceTree = "<group>"; };
 		5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +73,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B6327EC2B24D81100B2848A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				5B6327EA2B24D80E00B2848A /* BackgroundAudio.swift */,
+				5B6327F32B24D8B700B2848A /* SoundEffect.swift */,
+				5B6327ED2B24D82B00B2848A /* death.mp3 */,
+				5B6327F12B24D88900B2848A /* Intro.mp3 */,
+				5B6327EE2B24D82B00B2848A /* LevelUp.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		5B95EDC72B1FFD66002E7CD2 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */,
+				5B6327EC2B24D81100B2848A /* Audio */,
 				5B95EDF22B200327002E7CD2 /* Models */,
 				5B95EDF12B200319002E7CD2 /* Views */,
 				5B95EDE62B1FFE50002E7CD2 /* Managers */,
@@ -107,14 +136,17 @@
 		5B95EDF12B200319002E7CD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
+				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
 				5B6327E02B24D05B00B2848A /* TownView.swift */,
 				5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */,
 				5B6327DC2B24B67D00B2848A /* StatStepperView.swift */,
-				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
 				5B6327DA2B24B62200B2848A /* StatsView.swift */,
+				5B6327E62B24D4CA00B2848A /* ExpBarView.swift */,
+				5B6327E82B24D54000B2848A /* PlayerDetailsView.swift */,
 				5B6327DE2B24B71300B2848A /* StatManagerView.swift */,
 				5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */,
-				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
+				5B6327E42B24D2F000B2848A /* CharacterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B95EDDC2B1FFD67002E7CD2 /* Preview Assets.xcassets in Resources */,
+				5B6327F22B24D88900B2848A /* Intro.mp3 in Resources */,
+				5B6327EF2B24D82B00B2848A /* death.mp3 in Resources */,
+				5B6327F02B24D82B00B2848A /* LevelUp.mp3 in Resources */,
 				5B95EDD82B1FFD67002E7CD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,18 +236,23 @@
 			files = (
 				5B6327E32B24D09100B2848A /* PlayerSummaryView.swift in Sources */,
 				5B95EDE82B1FFE75002E7CD2 /* GameCharacter.swift in Sources */,
+				5B6327E92B24D54000B2848A /* PlayerDetailsView.swift in Sources */,
 				5B95EDEA2B1FFECC002E7CD2 /* StatType.swift in Sources */,
 				5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */,
 				5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */,
+				5B6327EB2B24D80E00B2848A /* BackgroundAudio.swift in Sources */,
 				5B95EDF02B2001D1002E7CD2 /* CharacterCreationView.swift in Sources */,
 				5B95EDEC2B1FFF92002E7CD2 /* GameSelectionView.swift in Sources */,
 				5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */,
+				5B6327E72B24D4CA00B2848A /* ExpBarView.swift in Sources */,
 				5B95EDE52B1FFDE8002E7CD2 /* GameManager.swift in Sources */,
 				5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */,
 				5B6327E12B24D05B00B2848A /* TownView.swift in Sources */,
 				5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */,
+				5B6327E52B24D2F000B2848A /* CharacterView.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,
 				5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */,
+				5B6327F42B24D8B700B2848A /* SoundEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

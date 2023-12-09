@@ -22,12 +22,8 @@ struct ContentView: View {
 //            CombatView(cm: CombatManager(player: gameManager.player, enemy: enemy))
             Text("test")
         case .main:
-//            TownView()
-            VStack {
-                Text(player.name)
-                Text("\(player.skillPointsAvailable)")
-                StatsView(stats: player.totalStats)
-            }
+            TownView()
+            
         case .shop:
 //            ShopView()
             Text("test")

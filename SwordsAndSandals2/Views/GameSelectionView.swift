@@ -25,6 +25,12 @@ struct GameSelectionView: View {
                 ToolbarItem{
                     NavigationLink{
                         CharacterCreationView()
+                            .onAppear{
+                                startBackgroundSound(sound: "Intro", type: "mp3")
+                            }
+                            .onDisappear{
+                                stopBackgroundSound()
+                            }
                     } label: {
                         Image(systemName: "plus")
                     }

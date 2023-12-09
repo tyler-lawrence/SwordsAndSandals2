@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TownView: View {
     @Environment(GameManager.self) var gameManager
+    @State private var showingPlayerDetailsSheet = false
     var player: GameCharacter {
         gameManager.player
     }
@@ -17,9 +18,16 @@ struct TownView: View {
             HStack {
                 PlayerSummaryView()
                     .environment(player)
+                    .onTapGesture {
+                        showingPlayerDetailsSheet.toggle()
+                    }
                 Spacer()
             }
             Spacer()
+        }
+        .sheet(isPresented: $showingPlayerDetailsSheet){
+            PlayerDetailsView()
+                .environment(player)
         }
     }
 }

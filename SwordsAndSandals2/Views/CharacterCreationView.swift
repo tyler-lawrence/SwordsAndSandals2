@@ -18,7 +18,7 @@ struct CharacterCreationView: View {
             Spacer()
             TextField("name", text: $gameManager.player.name)
                 .font(.largeTitle)
-            
+            CharacterView()
             StatManagerView(player: $gameManager.player)
             
             Spacer()
@@ -27,6 +27,7 @@ struct CharacterCreationView: View {
                 ContentView()
                     .environment(gameManager)
                     .navigationBarBackButtonHidden()
+                    
             }
             .buttonStyle(.borderedProminent)
             .simultaneousGesture(
