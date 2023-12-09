@@ -245,9 +245,9 @@
 		5B95EDF12B200319002E7CD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B63281D2B24E43F00B2848A /* Navigation */,
 				5B6328082B24DDF700B2848A /* Modifiers */,
 				5B63281C2B24E41C00B2848A /* Animation */,
-				5B63281D2B24E43F00B2848A /* Navigation */,
 				5B63281A2B24E3D300B2848A /* Stats */,
 				5B6328192B24E39D00B2848A /* Combat */,
 				5B63281B2B24E3F300B2848A /* Character */,
