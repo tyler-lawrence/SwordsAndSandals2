@@ -8,7 +8,6 @@
 import Foundation
 
 enum GameState: Codable {
-//    case setup
     case tutorial
     case combat(GameCharacter)
     case main

@@ -10,6 +10,8 @@
 		5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DA2B24B62200B2848A /* StatsView.swift */; };
 		5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DC2B24B67D00B2848A /* StatStepperView.swift */; };
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
+		5B6327E12B24D05B00B2848A /* TownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E02B24D05B00B2848A /* TownView.swift */; };
+		5B6327E32B24D09100B2848A /* PlayerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */; };
 		5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */; };
 		5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */; };
 		5B95EDD82B1FFD67002E7CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
+		5B6327E02B24D05B00B2848A /* TownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownView.swift; sourceTree = "<group>"; };
+		5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSummaryView.swift; sourceTree = "<group>"; };
 		5B95EDD02B1FFD66002E7CD2 /* SwordsAndSandals2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwordsAndSandals2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordsAndSandals2App.swift; sourceTree = "<group>"; };
 		5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		5B95EDF12B200319002E7CD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B6327E02B24D05B00B2848A /* TownView.swift */,
+				5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */,
 				5B6327DC2B24B67D00B2848A /* StatStepperView.swift */,
 				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
 				5B6327DA2B24B62200B2848A /* StatsView.swift */,
@@ -193,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6327E32B24D09100B2848A /* PlayerSummaryView.swift in Sources */,
 				5B95EDE82B1FFE75002E7CD2 /* GameCharacter.swift in Sources */,
 				5B95EDEA2B1FFECC002E7CD2 /* StatType.swift in Sources */,
 				5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */,
@@ -202,6 +209,7 @@
 				5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */,
 				5B95EDE52B1FFDE8002E7CD2 /* GameManager.swift in Sources */,
 				5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */,
+				5B6327E12B24D05B00B2848A /* TownView.swift in Sources */,
 				5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,
 				5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */,
