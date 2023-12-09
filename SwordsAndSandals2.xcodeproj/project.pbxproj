@@ -51,12 +51,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/StatsView.swift; sourceTree = SOURCE_ROOT; };
+		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/Stats/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
 		5B6327E02B24D05B00B2848A /* TownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownView.swift; sourceTree = "<group>"; };
 		5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSummaryView.swift; sourceTree = "<group>"; };
-		5B6327E42B24D2F000B2848A /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterView.swift; path = SwordsAndSandals2/Views/CharacterView.swift; sourceTree = SOURCE_ROOT; };
+		5B6327E42B24D2F000B2848A /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterView.swift; path = SwordsAndSandals2/Views/Character/CharacterView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327E62B24D4CA00B2848A /* ExpBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpBarView.swift; sourceTree = "<group>"; };
 		5B6327E82B24D54000B2848A /* PlayerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
 		5B6327EA2B24D80E00B2848A /* BackgroundAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAudio.swift; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 		5B6327EC2B24D81100B2848A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				5B6327FE2B24DBED00B2848A /* Haptics.swift */,
 				5B6327EA2B24D80E00B2848A /* BackgroundAudio.swift */,
 				5B6327F32B24D8B700B2848A /* SoundEffect.swift */,
 				5B6327ED2B24D82B00B2848A /* death.mp3 */,
@@ -127,6 +128,70 @@
 				5B63280B2B24DE4700B2848A /* View+CharacterModifiers.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		5B6328192B24E39D00B2848A /* Combat */ = {
+			isa = PBXGroup;
+			children = (
+				5B6328112B24DF2E00B2848A /* GameOverView.swift */,
+				5B63280D2B24DEBB00B2848A /* CombatView.swift */,
+				5B63280F2B24DEDC00B2848A /* PostCombatView.swift */,
+				5B6328002B24DC3300B2848A /* HealthBarView.swift */,
+				5B6327FC2B24DBB500B2848A /* CombatActionView.swift */,
+				5B6328042B24DCC800B2848A /* CharacterCombatView.swift */,
+				5B6328022B24DC8700B2848A /* DamageView.swift */,
+			);
+			path = Combat;
+			sourceTree = "<group>";
+		};
+		5B63281A2B24E3D300B2848A /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				5B6327DE2B24B71300B2848A /* StatManagerView.swift */,
+				5B6327DC2B24B67D00B2848A /* StatStepperView.swift */,
+				5B6327DA2B24B62200B2848A /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		5B63281B2B24E3F300B2848A /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */,
+				5B6328132B24E03300B2848A /* LevelUpView.swift */,
+				5B6327E82B24D54000B2848A /* PlayerDetailsView.swift */,
+				5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */,
+				5B6327E62B24D4CA00B2848A /* ExpBarView.swift */,
+				5B6327E42B24D2F000B2848A /* CharacterView.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		5B63281C2B24E41C00B2848A /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				5B6328152B24E03D00B2848A /* LevelUpAnimation.swift */,
+				5B6328172B24E19700B2848A /* TransitionView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		5B63281D2B24E43F00B2848A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
+				5B6327E02B24D05B00B2848A /* TownView.swift */,
+				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		5B63281E2B24E46400B2848A /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				5B6327EC2B24D81100B2848A /* Audio */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 		5B95EDC72B1FFD66002E7CD2 = {
@@ -149,9 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */,
-				5B6327FE2B24DBED00B2848A /* Haptics.swift */,
 				5B95EDF12B200319002E7CD2 /* Views */,
-				5B6327EC2B24D81100B2848A /* Audio */,
+				5B63281E2B24E46400B2848A /* Effects */,
 				5B95EDF22B200327002E7CD2 /* Models */,
 				5B95EDE62B1FFE50002E7CD2 /* Managers */,
 				5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */,
@@ -182,27 +246,11 @@
 			isa = PBXGroup;
 			children = (
 				5B6328082B24DDF700B2848A /* Modifiers */,
-				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
-				5B6328172B24E19700B2848A /* TransitionView.swift */,
-				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
-				5B6327E02B24D05B00B2848A /* TownView.swift */,
-				5B6327E22B24D09100B2848A /* PlayerSummaryView.swift */,
-				5B6327DC2B24B67D00B2848A /* StatStepperView.swift */,
-				5B6327DA2B24B62200B2848A /* StatsView.swift */,
-				5B6327E62B24D4CA00B2848A /* ExpBarView.swift */,
-				5B63280D2B24DEBB00B2848A /* CombatView.swift */,
-				5B6328132B24E03300B2848A /* LevelUpView.swift */,
-				5B6328152B24E03D00B2848A /* LevelUpAnimation.swift */,
-				5B6328112B24DF2E00B2848A /* GameOverView.swift */,
-				5B63280F2B24DEDC00B2848A /* PostCombatView.swift */,
-				5B6327E82B24D54000B2848A /* PlayerDetailsView.swift */,
-				5B6327DE2B24B71300B2848A /* StatManagerView.swift */,
-				5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */,
-				5B6327E42B24D2F000B2848A /* CharacterView.swift */,
-				5B6328002B24DC3300B2848A /* HealthBarView.swift */,
-				5B6327FC2B24DBB500B2848A /* CombatActionView.swift */,
-				5B6328042B24DCC800B2848A /* CharacterCombatView.swift */,
-				5B6328022B24DC8700B2848A /* DamageView.swift */,
+				5B63281C2B24E41C00B2848A /* Animation */,
+				5B63281D2B24E43F00B2848A /* Navigation */,
+				5B63281A2B24E3D300B2848A /* Stats */,
+				5B6328192B24E39D00B2848A /* Combat */,
+				5B63281B2B24E3F300B2848A /* Character */,
 			);
 			path = Views;
 			sourceTree = "<group>";
