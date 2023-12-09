@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(GameManager.self) var gameManager
-    
+    var player: GameCharacter {
+        gameManager.player
+    }
     var body: some View {
         switch gameManager.gameState {
         case .tutorial:
@@ -21,7 +23,11 @@ struct ContentView: View {
             Text("test")
         case .main:
 //            TownView()
-            Text("test")
+            VStack {
+                Text(player.name)
+                Text("\(player.skillPointsAvailable)")
+                StatsView(stats: player.totalStats)
+            }
         case .shop:
 //            ShopView()
             Text("test")

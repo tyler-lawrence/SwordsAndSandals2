@@ -14,10 +14,16 @@ final class GameManager: Identifiable, Codable {
     var id = UUID()
     var gameState: GameState = .main
     var player: GameCharacter
-//    var bosses: [GameCharacter] = [Character.boss1, Character.boss2]
     
     init() {
         self.player = GameCharacter(name: "Gladiator", maxHealth: 10)
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self._id = try container.decode(UUID.self, forKey: ._id)
+        self._gameState = try container.decode(GameState.self, forKey: ._gameState)
+        self._player = try container.decode(GameCharacter.self, forKey: ._player)
     }
     
     

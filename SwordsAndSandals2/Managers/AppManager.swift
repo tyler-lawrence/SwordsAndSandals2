@@ -39,8 +39,12 @@ final class AppManager {
         }
     }
     
-    func saveGameToDisk(_ gameManager: GameManager) {
+    func saveGame(_ gameManager: GameManager) {
         gameManagers.append(gameManager)
+        save()
+    }
+    
+    func save() {
         do {
             let directory = try FileManager.default.url(
                 for: .documentDirectory,

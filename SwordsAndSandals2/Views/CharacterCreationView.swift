@@ -19,6 +19,8 @@ struct CharacterCreationView: View {
             TextField("name", text: $gameManager.player.name)
                 .font(.largeTitle)
             
+            StatManagerView(player: $gameManager.player)
+            
             Spacer()
             
             NavigationLink("Begin"){
@@ -29,7 +31,7 @@ struct CharacterCreationView: View {
             .buttonStyle(.borderedProminent)
             .simultaneousGesture(
                 TapGesture().onEnded{
-                    appManager.saveGameToDisk(gameManager)
+                    appManager.saveGame(gameManager)
                 }
             )
         }

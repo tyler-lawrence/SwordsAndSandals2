@@ -69,6 +69,18 @@ final class GameCharacter: Codable {
         //        self.inventory = Inventory()
     }
     
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self._name = try container.decode(String.self, forKey: ._name)
+        self._maxHealth = try container.decode(Int.self, forKey: ._maxHealth)
+        self._currentHealth = try container.decode(Int.self, forKey: ._currentHealth)
+        self._gold = try container.decode(Int.self, forKey: ._gold)
+        self._skillPointsAvailable = try container.decode(Int.self, forKey: ._skillPointsAvailable)
+        self._level = try container.decode(Int.self, forKey: ._level)
+        self._currentExperience = try container.decode(Double.self, forKey: ._currentExperience)
+        self._baseStats = try container.decode(StatDictionary.self, forKey: ._baseStats)
+    }
+    
     func getTotalStat(for stat: StatType) -> Int {
         let base = baseStats[stat] ?? 0
         //        let bonus = inventory.getBonusStats(for: stat)
