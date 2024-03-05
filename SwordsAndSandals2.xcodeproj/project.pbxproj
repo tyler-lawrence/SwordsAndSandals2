@@ -41,9 +41,10 @@
 		5B6328232B24E70B00B2848A /* ItemSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328222B24E70B00B2848A /* ItemSlot.swift */; };
 		5B6328252B24E78900B2848A /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328242B24E78900B2848A /* Inventory.swift */; };
 		5B6328282B24E9DA00B2848A /* InventoryIconCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */; };
-		5B63282A2B24EA2700B2848A /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328292B24EA2700B2848A /* ItemDetailView.swift */; };
+		5B63282A2B24EA2700B2848A /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6328292B24EA2700B2848A /* ItemDetailsView.swift */; };
 		5B63282C2B24EB2300B2848A /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63282B2B24EB2300B2848A /* Shop.swift */; };
 		5B63282E2B24EB9B00B2848A /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63282D2B24EB9B00B2848A /* ShopView.swift */; };
+		5B6328302B26B28D00B2848A /* ItemInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */; };
 		5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */; };
 		5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */; };
 		5B95EDD82B1FFD67002E7CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95EDD72B1FFD67002E7CD2 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		5B95EDEC2B1FFF92002E7CD2 /* GameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */; };
 		5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDED2B2000E3002E7CD2 /* GameState.swift */; };
 		5B95EDF02B2001D1002E7CD2 /* CharacterCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */; };
+		5BB164092B2A49920022857E /* AllItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB164082B2A49920022857E /* AllItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,9 +94,10 @@
 		5B6328222B24E70B00B2848A /* ItemSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSlot.swift; sourceTree = "<group>"; };
 		5B6328242B24E78900B2848A /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryIconCircleView.swift; sourceTree = "<group>"; };
-		5B6328292B24EA2700B2848A /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		5B6328292B24EA2700B2848A /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		5B63282B2B24EB2300B2848A /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		5B63282D2B24EB9B00B2848A /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemInventoryView.swift; path = SwordsAndSandals2/Views/Item/ItemInventoryView.swift; sourceTree = SOURCE_ROOT; };
 		5B95EDD02B1FFD66002E7CD2 /* SwordsAndSandals2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwordsAndSandals2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B95EDD32B1FFD66002E7CD2 /* SwordsAndSandals2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordsAndSandals2App.swift; sourceTree = "<group>"; };
 		5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionView.swift; sourceTree = "<group>"; };
 		5B95EDED2B2000E3002E7CD2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreationView.swift; sourceTree = "<group>"; };
+		5BB164082B2A49920022857E /* AllItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,6 @@
 		5B6327EC2B24D81100B2848A /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				5B6327FE2B24DBED00B2848A /* Haptics.swift */,
 				5B6327EA2B24D80E00B2848A /* BackgroundAudio.swift */,
 				5B6327F32B24D8B700B2848A /* SoundEffect.swift */,
 				5B6327ED2B24D82B00B2848A /* death.mp3 */,
@@ -204,6 +207,7 @@
 		5B63281E2B24E46400B2848A /* Effects */ = {
 			isa = PBXGroup;
 			children = (
+				5B6327FE2B24DBED00B2848A /* Haptics.swift */,
 				5B6327EC2B24D81100B2848A /* Audio */,
 			);
 			path = Effects;
@@ -212,8 +216,10 @@
 		5B6328262B24E9C300B2848A /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				5BB164082B2A49920022857E /* AllItemsView.swift */,
+				5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */,
 				5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */,
-				5B6328292B24EA2700B2848A /* ItemDetailView.swift */,
+				5B6328292B24EA2700B2848A /* ItemDetailsView.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -260,8 +266,8 @@
 		5B95EDE62B1FFE50002E7CD2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
 				5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */,
+				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
 				5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */,
 			);
 			path = Managers;
@@ -380,8 +386,9 @@
 				5B6328182B24E19700B2848A /* TransitionView.swift in Sources */,
 				5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */,
 				5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */,
+				5B6328302B26B28D00B2848A /* ItemInventoryView.swift in Sources */,
 				5B6328102B24DEDC00B2848A /* PostCombatView.swift in Sources */,
-				5B63282A2B24EA2700B2848A /* ItemDetailView.swift in Sources */,
+				5B63282A2B24EA2700B2848A /* ItemDetailsView.swift in Sources */,
 				5B6328072B24DDE600B2848A /* LivingCharacter.swift in Sources */,
 				5B6327EB2B24D80E00B2848A /* BackgroundAudio.swift in Sources */,
 				5B6328232B24E70B00B2848A /* ItemSlot.swift in Sources */,
@@ -409,6 +416,7 @@
 				5B6327E52B24D2F000B2848A /* CharacterView.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,
 				5B6328282B24E9DA00B2848A /* InventoryIconCircleView.swift in Sources */,
+				5BB164092B2A49920022857E /* AllItemsView.swift in Sources */,
 				5B6327F72B24DA6100B2848A /* CombatAction.swift in Sources */,
 				5B63282C2B24EB2300B2848A /* Shop.swift in Sources */,
 				5B95EDD42B1FFD66002E7CD2 /* SwordsAndSandals2App.swift in Sources */,

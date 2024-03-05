@@ -35,7 +35,7 @@ struct ShopView: View {
                         selectedItem = item
                         showingAlert.toggle()
                     } label: {
-                        ItemDetailView(item: item)
+                        ItemDetailsView(item: item)
                             .padding(.horizontal)
                     }
                     .disabled(gameManager.player.gold < item.price)

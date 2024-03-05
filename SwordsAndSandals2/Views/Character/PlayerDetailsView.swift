@@ -27,42 +27,38 @@ struct PlayerDetailsView: View {
                     Text(player.name)
                         .font(.title)
                     Spacer()
-                    VStack{
+                    VStack(alignment: .leading){
                         Text("💰 \(player.gold)")
                         Text("❤️ \(player.currentHealth) / \(player.maxHealth)")
                     }
                     
                 }
                 ExpBarView(player: player)
-                Picker("", selection: $selection){
-                    ForEach(DetailOptions.allCases, id: \.self) {
-                        Text($0.rawValue)
-                    }
-                }
+                
             }
             .padding()
             .background(.bar)
+            CharacterView(character: player)
             Spacer()
-            
+            Picker("", selection: $selection){
+                ForEach(DetailOptions.allCases, id: \.self) {
+                    Text($0.rawValue)
+                }
+            }
+            .pickerStyle(.segmented)
             if selection == .stats {
-                CharacterView()
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
-                InventoryView
+                AllItemsView(player: player)
             }
             
             
-            Spacer()
         }
         
     }
     
-    var InventoryView: some View {
-        ForEach(player.inventory.allItems){ item in
-                ItemDetailView(item: item)
-        }
-    }
+    
 }
 
 #Preview {

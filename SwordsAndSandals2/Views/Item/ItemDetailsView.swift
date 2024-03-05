@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct ItemDetailView: View {
+struct ItemDetailsView: View {
+    
     let item: Item
-    var itemStats: StatDictionary {
-        item.stats
-    }
+
     var body: some View {
         VStack{
             Text(item.name)
@@ -34,5 +33,5 @@ struct ItemDetailView: View {
 }
 
 #Preview {
-    ItemDetailView(item: Item.basicSword)
+    ItemDetailsView(item: Item.basicSword)
 }

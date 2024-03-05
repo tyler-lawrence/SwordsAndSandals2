@@ -63,6 +63,7 @@ struct CombatView: View {
                             DamageView(damage: cm.playerDamageTaken)
                         }
                     }
+                    
                     Spacer()
                     
                     ZStack{

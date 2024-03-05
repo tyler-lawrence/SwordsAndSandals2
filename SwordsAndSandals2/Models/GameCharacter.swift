@@ -88,8 +88,9 @@ final class GameCharacter: Codable {
     
     func buy(_ item: Item) {
         guard gold >= item.price else { return }
-        inventory.allItems.append(item)
         gold -= item.price
+        inventory.allItems.append(item)
+        shopSuccess()
     }
     
     func attemptAttack(using combatAction: CombatAction) -> Bool {
@@ -119,9 +120,15 @@ final class GameCharacter: Codable {
     }
     
 }
+
 #if DEBUG
 extension GameCharacter {
-    static let sample = GameCharacter(name: "Sample", maxHealth: 10)
+    static var sample: GameCharacter{
+        let c = GameCharacter(name: "Sample", maxHealth: 10)
+        c.inventory.weapon = .basicSword
+        c.inventory.allItems = [.basicSword, .helmet, .plate]
+        return c
+    }
     
     static var sampleDeadCharacter: GameCharacter {
         let c = GameCharacter(

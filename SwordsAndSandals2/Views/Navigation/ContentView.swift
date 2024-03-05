@@ -10,9 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(GameManager.self) var gameManager
+    
     var player: GameCharacter {
         gameManager.player
     }
+    
     var body: some View {
         switch gameManager.gameState {
         case .tutorial:
@@ -21,7 +23,6 @@ struct ContentView: View {
             CombatView(cm: CombatManager(player: player, enemy: enemy))
         case .main:
             TownView()
-            
         case .shop:
             ShopView()
         case .levelUp:
@@ -29,9 +30,7 @@ struct ContentView: View {
         case .transition:
             TransitionView()
         }
-        
     }
-    
 }
 
 #Preview {

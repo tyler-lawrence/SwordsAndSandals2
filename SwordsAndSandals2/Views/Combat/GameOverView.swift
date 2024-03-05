@@ -41,7 +41,7 @@ struct GameOverView: View {
                     .font(.largeTitle)
                     .foregroundColor(.red)
                     .padding()
-                    CharacterView()
+                    CharacterView(character: player)
                         .deadCharacter()
                 }
             }

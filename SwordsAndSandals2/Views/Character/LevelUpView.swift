@@ -12,12 +12,12 @@ struct LevelUpView: View {
     @State var showingAnimation: Bool = true
     var body: some View {
         if showingAnimation {
-            LevelUpAnimation(showingAnimation: $showingAnimation)
+            LevelUpAnimation(player: gameManager.player, showingAnimation: $showingAnimation)
         } else{
             VStack{
                 Text("Level Up!")
                     .font(.largeTitle)
-                CharacterView()
+                CharacterView(character: gameManager.player)
                 StatManagerView(player: $gameManager.player)
                 Button("Enter Town"){
                     gameManager.gameState = .main

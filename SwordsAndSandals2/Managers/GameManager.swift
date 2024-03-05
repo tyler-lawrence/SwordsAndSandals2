@@ -12,7 +12,7 @@ import Foundation
 final class GameManager: Identifiable, Codable {
     
     var id = UUID()
-    var gameState: GameState = .main
+    var gameState: GameState = .tutorial
     var player: GameCharacter
     var shop = Shop()
     

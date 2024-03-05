@@ -14,7 +14,25 @@ struct Inventory: Codable {
     var legs: Item?
     var weapon: Item?
     
-    var allItems: [Item] = []
+    var allItems = [Item]()
+    
+    var equippedItems: [Item] {
+        var items = [Item]()
+        if let head {
+            items.append(head)
+        }
+        if let torso {
+            items.append(torso)
+        }
+        if let legs {
+            items.append(legs)
+        }
+        if let weapon {
+            items.append(weapon)
+        }
+        
+        return items
+    }
     
     func getBonusStats(for statType: StatType) -> Int {
        
@@ -26,26 +44,5 @@ struct Inventory: Codable {
         
         return weaponStat + torsoArmorStat + legArmorStat + headArmorStat
     }
-    
-    enum InventoryError: Error {
-        case wrongSlot
-    }
-    
-    mutating func equip(_ item: Item, at slot: ItemSlot) throws {
-        
-        guard item.itemSlot == slot else { throw InventoryError.wrongSlot }
-        
-        switch item.itemSlot {
-        case .head:
-            head = item
-        case .torso:
-            torso = item
-        case .legs:
-            legs = item
-        case .weapon:
-            weapon = item
-        }
-    }
-    
     
 }
