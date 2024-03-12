@@ -15,10 +15,10 @@ struct CharacterCombatView: View {
             Text(character.name)
             if character.currentHealth > 0 {
                 HealthBarView(character: character)
-                CharacterView()
+                CharacterView(character: character)
                     .livingCharacter()
             } else {
-                CharacterView()
+                CharacterView(character: character)
                     .deadCharacter()
             }
         }

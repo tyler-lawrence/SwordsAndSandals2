@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LevelUpAnimation: View {
     
-//    var player: Character
+    var player: GameCharacter
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
     @State private var expBarVal = 0.0
@@ -22,7 +22,7 @@ struct LevelUpAnimation: View {
     var body: some View {
         
         ZStack {
-            CharacterView()
+            CharacterView(character: player)
             Circle()
                 .trim(from: 0, to: expBarVal)
 //                .stroke(player.bodyColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
@@ -48,5 +48,5 @@ struct LevelUpAnimation: View {
 }
 
 #Preview {
-    LevelUpAnimation(showingAnimation: .constant(true))
+    LevelUpAnimation(player: GameCharacter.sample, showingAnimation: .constant(true))
 }

@@ -9,38 +9,50 @@ import SwiftUI
 
 struct CharacterView: View {
     
-//    let character: GameCharacter
+    let character: GameCharacter
         
     var body: some View {
-            //MARK: basic
-            ZStack{
-                Image("Head")
-                Image("Legs")
-                Image("Torso")
-            }
-        
-//            .foregroundColor(character.bodyColor)
-            
+
+        ZStack{
+            Image("Head")
+                .resizable()
+                .scaledToFit()
+            Image("Legs")
+                .resizable()
+                .scaledToFit()
+            Image("Torso")
+                .resizable()
+                .scaledToFit()
+
             //MARK: items
-//            if let headArmor = character.inventory.headArmor {
-//                Image(headArmor.equippedItemImagePath())
-//            }
-//            
-//            if let weapon = character.inventory.weapon {
-//                Image(weapon.equippedItemImagePath())
-//            }
-//            
-//            if let torsoArmor = character.inventory.torsoArmor {
-//                Image(torsoArmor.equippedItemImagePath())
-//            }
-//            
-//            if let legArmor = character.inventory.legArmor {
-//                Image(legArmor.equippedItemImagePath())
-//            }
-        
+            if let headArmor = character.inventory.head {
+                Image(headArmor.equippedItemImagePath)
+                    .resizable()
+                    .scaledToFit()
+            }
+            
+            
+            if let weapon = character.inventory.weapon {
+                Image(weapon.equippedItemImagePath)
+                    .resizable()
+                    .scaledToFit()
+            }
+            
+            if let torsoArmor = character.inventory.torso {
+                Image(torsoArmor.equippedItemImagePath)
+                    .resizable()
+                    .scaledToFit()
+            }
+            
+            if let legArmor = character.inventory.legs {
+                Image(legArmor.equippedItemImagePath)
+                    .resizable()
+                    .scaledToFit()
+            }
+        }
     }
 }
 
 #Preview {
-    CharacterView(/*character: GameCharacter.sample*/)
+    CharacterView(character: GameCharacter.sample)
 }

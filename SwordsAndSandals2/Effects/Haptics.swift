@@ -33,6 +33,10 @@ func hapticFeedback(for combatAction: CombatAction) {
     }
 }
 
+func shopSuccess(){
+    UINotificationFeedbackGenerator().notificationOccurred(.success)
+}
+
 func strengthHaptic() {
     guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
     var events = [CHHapticEvent]()

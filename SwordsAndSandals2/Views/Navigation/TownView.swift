@@ -29,6 +29,11 @@ struct TownView: View {
             } label: {
                 Text("Combat")
             }
+            Button{
+                gameManager.gameState = .shop
+            } label: {
+                Text("Shop")
+            }
             Spacer()
         }
         .sheet(isPresented: $showingPlayerDetailsSheet){

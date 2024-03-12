@@ -12,8 +12,9 @@ import Foundation
 final class GameManager: Identifiable, Codable {
     
     var id = UUID()
-    var gameState: GameState = .main
+    var gameState: GameState = .tutorial
     var player: GameCharacter
+    var shop = Shop()
     
     init() {
         self.player = GameCharacter(name: "Gladiator", maxHealth: 10)
@@ -25,7 +26,6 @@ final class GameManager: Identifiable, Codable {
         self._gameState = try container.decode(GameState.self, forKey: ._gameState)
         self._player = try container.decode(GameCharacter.self, forKey: ._player)
     }
-    
     
     func newWeakCharacter() -> GameCharacter {
         let c = GameCharacter(name: "local punk", maxHealth: 10)

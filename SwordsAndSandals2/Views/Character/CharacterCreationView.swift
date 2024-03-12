@@ -18,7 +18,7 @@ struct CharacterCreationView: View {
             Spacer()
             TextField("name", text: $gameManager.player.name)
                 .font(.largeTitle)
-            CharacterView()
+            CharacterView(character: gameManager.player)
             StatManagerView(player: $gameManager.player)
             
             Spacer()
@@ -37,6 +37,12 @@ struct CharacterCreationView: View {
             )
         }
         .padding()
+        .onAppear{
+            startBackgroundSound(sound: "Intro", type: "mp3")
+        }
+        .onDisappear{
+            stopBackgroundSound()
+        }
         
     }
 }
