@@ -24,17 +24,20 @@ struct TownView: View {
                 }
                 Spacer()
             }
+            Spacer()
             Button{
                 let enemy = gameManager.newWeakCharacter()
                 gameManager.gameState = .combat(enemy)
             } label: {
                 Text("Combat")
             }
+            .buttonStyle(.borderedProminent)
             Button{
                 gameManager.gameState = .shop
             } label: {
                 Text("Shop")
             }
+            .buttonStyle(.borderedProminent)
             Spacer()
         }
         .sheet(isPresented: $showingPlayerDetailsSheet){
