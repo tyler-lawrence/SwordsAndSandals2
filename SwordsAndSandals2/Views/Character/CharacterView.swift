@@ -14,21 +14,16 @@ struct CharacterView: View {
     var body: some View {
 
         ZStack{
-//            Image("Head")
-//                .resizable()
-//                .scaledToFit()
-//            Image("Legs")
-//                .resizable()
-//                .scaledToFit()
-//            Image("Torso")
-//                .resizable()
-//                .scaledToFit()
-            Image(.playerModel2)
+            Image("Head")
                 .resizable()
                 .scaledToFit()
-            
-            //            .foregroundColor(character.bodyColor)
-            
+            Image("Legs")
+                .resizable()
+                .scaledToFit()
+            Image("Torso")
+                .resizable()
+                .scaledToFit()
+
             //MARK: items
             if let headArmor = character.inventory.head {
                 Image(headArmor.equippedItemImagePath)
