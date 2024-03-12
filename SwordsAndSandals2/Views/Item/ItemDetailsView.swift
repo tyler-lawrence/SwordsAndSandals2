@@ -27,7 +27,7 @@ struct ItemDetailsView: View {
         .background{
             RoundedRectangle(cornerRadius: 25.0)
                 .foregroundColor(.gray).opacity(0.2)
-                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .shadow(radius: 10)
         }
     }
 }
