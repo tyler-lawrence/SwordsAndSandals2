@@ -16,11 +16,12 @@ struct TownView: View {
     var body: some View {
         VStack{
             HStack {
-                PlayerSummaryView()
-                    .environment(player)
-                    .onTapGesture {
-                        showingPlayerDetailsSheet.toggle()
-                    }
+                Button{
+                    showingPlayerDetailsSheet.toggle()
+                } label: {
+                    PlayerSummaryView()
+                        .environment(player)
+                }
                 Spacer()
             }
             Button{

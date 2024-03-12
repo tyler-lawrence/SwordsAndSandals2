@@ -39,6 +39,11 @@ final class GameManager: Identifiable, Codable {
 
 #if DEBUG
 extension GameManager {
-    static let sample = GameManager()
+    static var sample: GameManager {
+        let gm = GameManager()
+        gm.player.inventory.allItems.append(Item.basicSword)
+        return gm
+    }
+    
 }
 #endif

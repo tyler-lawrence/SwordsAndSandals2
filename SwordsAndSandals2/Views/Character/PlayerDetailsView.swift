@@ -38,30 +38,35 @@ struct PlayerDetailsView: View {
             }
             .padding()
             .background(.bar)
+            
             CharacterView(character: player)
+            
             Spacer()
+            
             Picker("", selection: $selection){
                 ForEach(DetailOptions.allCases, id: \.self) {
                     Text($0.rawValue)
                 }
             }
             .pickerStyle(.segmented)
+            
             if selection == .stats {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
                 AllItemsView(player: player)
+                    .padding(.horizontal)
             }
-            
-            
         }
-        
     }
-    
-    
 }
 
 #Preview {
     PlayerDetailsView()
         .environment(GameCharacter.sample)
+}
+
+#Preview {
+    TownView()
+        .environment(GameManager.sample)
 }

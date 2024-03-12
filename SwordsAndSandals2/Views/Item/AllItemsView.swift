@@ -18,10 +18,10 @@ struct AllItemsView: View {
             LazyVGrid(columns: columns){
                 ForEach(player.inventory.allItems){ item in
                     ItemInventoryView(item: item)
-                    //                InventoryRowView(item: item)
-                        .padding()
+//                        .padding()
                 }
             }
+            .padding(.leading)
         }
     }
 }
