@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#warning("content unavailable view")
+
 struct GameSelectionView: View {
     
     @Environment(AppManager.self) var appManager
@@ -28,6 +28,11 @@ struct GameSelectionView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                }
+            }
+            .overlay{
+                if appManager.gameManagers.isEmpty {
+                    ContentUnavailableView("Press the + to add a new game", systemImage: "arrow.up.forward")
                 }
             }
             
