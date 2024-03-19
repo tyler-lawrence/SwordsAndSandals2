@@ -57,7 +57,6 @@
 		5B95EDEC2B1FFF92002E7CD2 /* GameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */; };
 		5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDED2B2000E3002E7CD2 /* GameState.swift */; };
 		5B95EDF02B2001D1002E7CD2 /* CharacterCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */; };
-		5BB164092B2A49920022857E /* AllItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB164082B2A49920022857E /* AllItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,7 +112,6 @@
 		5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionView.swift; sourceTree = "<group>"; };
 		5B95EDED2B2000E3002E7CD2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		5B95EDEF2B2001D1002E7CD2 /* CharacterCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreationView.swift; sourceTree = "<group>"; };
-		5BB164082B2A49920022857E /* AllItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +216,6 @@
 		5B6328262B24E9C300B2848A /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				5BB164082B2A49920022857E /* AllItemsView.swift */,
 				5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */,
 				5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */,
 				5B6328292B24EA2700B2848A /* ItemDetailsView.swift */,
@@ -419,7 +416,6 @@
 				5B6327E52B24D2F000B2848A /* CharacterView.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,
 				5B6328282B24E9DA00B2848A /* InventoryIconCircleView.swift in Sources */,
-				5BB164092B2A49920022857E /* AllItemsView.swift in Sources */,
 				5B6327F72B24DA6100B2848A /* CombatAction.swift in Sources */,
 				5B63282C2B24EB2300B2848A /* Shop.swift in Sources */,
 				5B4D45D22BA9D1A200AB03D5 /* Item+Transferable.swift in Sources */,

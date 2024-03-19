@@ -73,9 +73,6 @@ struct PlayerDetailsView: View {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
-//                AllItemsView(player: player)
-//                    .padding(.horizontal)
-
                 ScrollView(.horizontal){
                     VStack {
                         LazyVGrid(columns: columns){
