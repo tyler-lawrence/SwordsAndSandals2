@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct SwordsAndSandals2App: App {
@@ -17,6 +18,13 @@ struct SwordsAndSandals2App: App {
                 .environment(appManager)
                 .onChange(of: scenePhase){
                     appManager.save()
+                }
+                .task {
+                    // Configure and load your tips at app launch.
+                    try? Tips.configure([
+                        .displayFrequency(.immediate),
+                        .datastoreLocation(.applicationDefault)
+                    ])
                 }
         }
     }

@@ -90,7 +90,7 @@ final class GameCharacter: Codable {
         guard gold >= item.price else { return }
         gold -= item.price
         inventory.allItems.append(item)
-        shopSuccess()
+        success()
     }
     
     func attemptAttack(using combatAction: CombatAction) -> Bool {

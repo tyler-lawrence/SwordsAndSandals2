@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct CombatView: View {
     
@@ -50,6 +51,7 @@ struct CombatView: View {
                 }
                 .padding()
                 .background(Rectangle().foregroundStyle(.bar))
+                TipView(CombatTip(), arrowEdge: .top)
                 
                 Spacer()
                 

@@ -30,6 +30,11 @@ struct GameSelectionView: View {
                     }
                 }
             }
+            .overlay{
+                if appManager.gameManagers.isEmpty {
+                    ContentUnavailableView("Press the + to add a new game", systemImage: "arrow.up.forward")
+                }
+            }
             
         }
        

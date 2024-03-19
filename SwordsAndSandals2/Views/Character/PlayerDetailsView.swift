@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct PlayerDetailsView: View {
     @Environment(GameCharacter.self) var player
@@ -73,6 +74,7 @@ struct PlayerDetailsView: View {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
+                TipView(InventoryTip(), arrowEdge: .bottom)
                 ScrollView(.horizontal){
                     VStack {
                         LazyVGrid(columns: columns){
@@ -80,7 +82,10 @@ struct PlayerDetailsView: View {
                                 ItemInventoryView(item: item)
                                     .draggable(item){
                                         Text("Drop in a slot")
-                                            .onAppear{selectedItem = item}
+                                            .onAppear{
+                                                selectedItem = item
+                                                success()
+                                            }
                                     }
                             }
                         }
