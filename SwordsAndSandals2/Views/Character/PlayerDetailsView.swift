@@ -16,8 +16,6 @@ struct PlayerDetailsView: View {
         case inventory = "Inventory"
     }
     
-    var inventoryTip = InventoryTip()
-    
     @State private var selection: DetailOptions = .inventory
     @State private var selectedItem: Item?
     
@@ -76,7 +74,7 @@ struct PlayerDetailsView: View {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
-                TipView(inventoryTip, arrowEdge: .bottom)
+                TipView(InventoryTip(), arrowEdge: .bottom)
                 ScrollView(.horizontal){
                     VStack {
                         LazyVGrid(columns: columns){
@@ -84,7 +82,10 @@ struct PlayerDetailsView: View {
                                 ItemInventoryView(item: item)
                                     .draggable(item){
                                         Text("Drop in a slot")
-                                            .onAppear{selectedItem = item}
+                                            .onAppear{
+                                                selectedItem = item
+                                                success()
+                                            }
                                     }
                             }
                         }

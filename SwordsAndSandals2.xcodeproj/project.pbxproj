@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B4D45D22BA9D1A200AB03D5 /* Item+Transferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D12BA9D1A200AB03D5 /* Item+Transferable.swift */; };
 		5B4D45D42BA9FE6900AB03D5 /* InventoryTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */; };
+		5B4D45D62BAA072600AB03D5 /* CombatTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D52BAA072600AB03D5 /* CombatTip.swift */; };
 		5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DA2B24B62200B2848A /* StatsView.swift */; };
 		5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DC2B24B67D00B2848A /* StatStepperView.swift */; };
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		5B4D45D12BA9D1A200AB03D5 /* Item+Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Transferable.swift"; sourceTree = "<group>"; };
 		5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTip.swift; sourceTree = "<group>"; };
+		5B4D45D52BAA072600AB03D5 /* CombatTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatTip.swift; sourceTree = "<group>"; };
 		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/Stats/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				5B63280F2B24DEDC00B2848A /* PostCombatView.swift */,
 				5B6328002B24DC3300B2848A /* HealthBarView.swift */,
 				5B6327FC2B24DBB500B2848A /* CombatActionView.swift */,
+				5B4D45D52BAA072600AB03D5 /* CombatTip.swift */,
 				5B6328042B24DCC800B2848A /* CharacterCombatView.swift */,
 				5B6328022B24DC8700B2848A /* DamageView.swift */,
 			);
@@ -218,8 +221,8 @@
 		5B6328262B24E9C300B2848A /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */,
 				5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */,
+				5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */,
 				5B6328292B24EA2700B2848A /* ItemDetailsView.swift */,
 				5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */,
 			);
@@ -334,7 +337,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					5B95EDCF2B1FFD66002E7CD2 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -389,6 +392,7 @@
 				5B6328182B24E19700B2848A /* TransitionView.swift in Sources */,
 				5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */,
 				5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */,
+				5B4D45D62BAA072600AB03D5 /* CombatTip.swift in Sources */,
 				5B6328302B26B28D00B2848A /* ItemInventoryView.swift in Sources */,
 				5B6328102B24DEDC00B2848A /* PostCombatView.swift in Sources */,
 				5B63282A2B24EA2700B2848A /* ItemDetailsView.swift in Sources */,
@@ -465,6 +469,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -526,6 +531,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -553,6 +559,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwordsAndSandals2/SwordsAndSandals2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwordsAndSandals2/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PF4YUG536;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -566,8 +573,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -591,6 +598,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwordsAndSandals2/SwordsAndSandals2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwordsAndSandals2/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PF4YUG536;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -604,8 +612,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

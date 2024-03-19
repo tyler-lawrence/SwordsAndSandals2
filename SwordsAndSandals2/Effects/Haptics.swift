@@ -33,7 +33,7 @@ func hapticFeedback(for combatAction: CombatAction) {
     }
 }
 
-func shopSuccess(){
+func success(){
     UINotificationFeedbackGenerator().notificationOccurred(.success)
 }
 

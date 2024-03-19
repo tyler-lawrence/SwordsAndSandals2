@@ -21,7 +21,6 @@ struct InventoryIconCircleView: View {
     @State var degrees: Double = 360.0
     let itemShape = RoundedRectangle(cornerRadius: 10)
     let itemSlot: ItemSlot
-//    @State var item: Item?
     @Binding var draggedItem: Item?
     var imagePath: String {
         player.inventory.itemPath(for: itemSlot) ?? ""
