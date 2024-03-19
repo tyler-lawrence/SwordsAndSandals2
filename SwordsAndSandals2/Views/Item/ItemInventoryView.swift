@@ -13,7 +13,7 @@ struct ItemInventoryView: View {
     @State var showingDetails = false
     
     var body: some View {
-        InventoryIconCircleView(color: .gray)
+        InventoryIconCircleView(color: .gray, itemSlot: item.itemSlot, draggedItem: .constant(nil))
             .overlay{
                 Image(item.iconImagePath)
             }

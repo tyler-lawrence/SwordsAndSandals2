@@ -16,6 +16,9 @@ struct PlayerDetailsView: View {
     }
     
     @State private var selection: DetailOptions = .inventory
+    @State private var selectedItem: Item?
+    
+    let columns = [GridItem(), GridItem()]
     
     var body: some View {
         VStack{
@@ -38,30 +41,63 @@ struct PlayerDetailsView: View {
             }
             .padding()
             .background(.bar)
-            CharacterView(character: player)
+            
+            HStack {
+                VStack{
+                    Spacer()
+                    InventoryIconCircleView(itemSlot: .head, draggedItem: $selectedItem)
+                    Spacer()
+                    InventoryIconCircleView(itemSlot: .torso, draggedItem: $selectedItem)
+                    Spacer()
+                    InventoryIconCircleView(itemSlot: .legs, draggedItem: $selectedItem)
+                    Spacer()
+                }
+                .padding(.leading)
+                CharacterView(character: player)
+                VStack{
+                    InventoryIconCircleView(itemSlot: .weapon, draggedItem: $selectedItem)
+                }
+                .padding(.trailing)
+            }
+            
             Spacer()
+            
             Picker("", selection: $selection){
                 ForEach(DetailOptions.allCases, id: \.self) {
                     Text($0.rawValue)
                 }
             }
             .pickerStyle(.segmented)
+            
             if selection == .stats {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
-                AllItemsView(player: player)
+                ScrollView(.horizontal){
+                    VStack {
+                        LazyVGrid(columns: columns){
+                            ForEach(player.inventory.allItems){ item in
+                                ItemInventoryView(item: item)
+                                    .draggable(item){
+                                        Text("Drop in a slot")
+                                            .onAppear{selectedItem = item}
+                                    }
+                            }
+                        }
+                        .padding(.leading)
+                    }
+                }
             }
-            
-            
         }
-        
     }
-    
-    
 }
 
 #Preview {
     PlayerDetailsView()
         .environment(GameCharacter.sample)
+}
+
+#Preview {
+    TownView()
+        .environment(GameManager.sample)
 }
