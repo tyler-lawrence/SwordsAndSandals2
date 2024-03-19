@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#warning("content unavailable view")
 struct GameSelectionView: View {
     
     @Environment(AppManager.self) var appManager

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B4D45D22BA9D1A200AB03D5 /* Item+Transferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D12BA9D1A200AB03D5 /* Item+Transferable.swift */; };
+		5B4D45D42BA9FE6900AB03D5 /* InventoryTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */; };
 		5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DA2B24B62200B2848A /* StatsView.swift */; };
 		5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DC2B24B67D00B2848A /* StatStepperView.swift */; };
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		5B4D45D12BA9D1A200AB03D5 /* Item+Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Transferable.swift"; sourceTree = "<group>"; };
+		5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTip.swift; sourceTree = "<group>"; };
 		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/Stats/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				5B63282F2B26B28D00B2848A /* ItemInventoryView.swift */,
 				5B6328272B24E9DA00B2848A /* InventoryIconCircleView.swift */,
 				5B6328292B24EA2700B2848A /* ItemDetailsView.swift */,
+				5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				5B6327F92B24DA9000B2848A /* CombatManager.swift in Sources */,
 				5B6328162B24E03D00B2848A /* LevelUpAnimation.swift in Sources */,
 				5B63280C2B24DE4700B2848A /* View+CharacterModifiers.swift in Sources */,
+				5B4D45D42BA9FE6900AB03D5 /* InventoryTip.swift in Sources */,
 				5B6328012B24DC3300B2848A /* HealthBarView.swift in Sources */,
 				5B95EDF02B2001D1002E7CD2 /* CharacterCreationView.swift in Sources */,
 				5B6327FD2B24DBB500B2848A /* CombatActionView.swift in Sources */,

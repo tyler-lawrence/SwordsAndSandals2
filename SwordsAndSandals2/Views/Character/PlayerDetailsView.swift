@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct PlayerDetailsView: View {
     @Environment(GameCharacter.self) var player
@@ -14,6 +15,8 @@ struct PlayerDetailsView: View {
         case stats = "Stats"
         case inventory = "Inventory"
     }
+    
+    var inventoryTip = InventoryTip()
     
     @State private var selection: DetailOptions = .inventory
     @State private var selectedItem: Item?
@@ -73,6 +76,7 @@ struct PlayerDetailsView: View {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
+                TipView(inventoryTip, arrowEdge: .bottom)
                 ScrollView(.horizontal){
                     VStack {
                         LazyVGrid(columns: columns){
