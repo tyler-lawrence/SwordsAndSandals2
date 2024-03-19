@@ -15,13 +15,15 @@ struct AllItemsView: View {
     var body: some View {
         
         ScrollView(.horizontal){
-            LazyVGrid(columns: columns){
-                ForEach(player.inventory.allItems){ item in
-                    ItemInventoryView(item: item)
-//                        .padding()
+            VStack {
+                LazyVGrid(columns: columns){
+                    ForEach(player.inventory.allItems){ item in
+                        ItemInventoryView(item: item)
+                            .draggable(item)
+                    }
                 }
+                .padding(.leading)
             }
-            .padding(.leading)
         }
     }
 }

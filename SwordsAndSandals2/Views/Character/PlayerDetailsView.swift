@@ -16,6 +16,9 @@ struct PlayerDetailsView: View {
     }
     
     @State private var selection: DetailOptions = .inventory
+    @State private var selectedItem: Item?
+    
+    let columns = [GridItem(), GridItem()]
     
     var body: some View {
         VStack{
@@ -39,7 +42,23 @@ struct PlayerDetailsView: View {
             .padding()
             .background(.bar)
             
-            CharacterView(character: player)
+            HStack {
+                VStack{
+                    Spacer()
+                    InventoryIconCircleView(itemSlot: .head, draggedItem: $selectedItem)
+                    Spacer()
+                    InventoryIconCircleView(itemSlot: .torso, draggedItem: $selectedItem)
+                    Spacer()
+                    InventoryIconCircleView(itemSlot: .legs, draggedItem: $selectedItem)
+                    Spacer()
+                }
+                .padding(.leading)
+                CharacterView(character: player)
+                VStack{
+                    InventoryIconCircleView(itemSlot: .weapon, draggedItem: $selectedItem)
+                }
+                .padding(.trailing)
+            }
             
             Spacer()
             
@@ -54,8 +73,23 @@ struct PlayerDetailsView: View {
                 StatsView(stats: player.totalStats)
                     .padding(.horizontal)
             } else {
-                AllItemsView(player: player)
-                    .padding(.horizontal)
+//                AllItemsView(player: player)
+//                    .padding(.horizontal)
+
+                ScrollView(.horizontal){
+                    VStack {
+                        LazyVGrid(columns: columns){
+                            ForEach(player.inventory.allItems){ item in
+                                ItemInventoryView(item: item)
+                                    .draggable(item){
+                                        Text("Drop in a slot")
+                                            .onAppear{selectedItem = item}
+                                    }
+                            }
+                        }
+                        .padding(.leading)
+                    }
+                }
             }
         }
     }
