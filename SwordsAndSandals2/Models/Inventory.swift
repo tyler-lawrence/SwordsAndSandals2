@@ -45,4 +45,54 @@ struct Inventory: Codable {
         return weaponStat + torsoArmorStat + legArmorStat + headArmorStat
     }
     
+    func indexForItem(_ item: Item) -> Int? {
+        allItems.firstIndex{ $0.id == item.id }
+    }
+    
+    mutating func remove(item: Item) {
+        if let index = indexForItem(item){
+            allItems.remove(at: index)
+        }
+    }
+    
+    mutating func equip(_ item: Item, at slot: ItemSlot) {
+        guard item.itemSlot == slot else { return }
+        
+        switch slot {
+        case .head:
+            if let headItem = head {
+                allItems.append(headItem)
+            }
+            head = item
+        case .torso:
+            if let torsoItem = torso {
+                allItems.append(torsoItem)
+            }
+            torso = item
+        case .legs:
+            if let legsItem = legs {
+                allItems.append(legsItem)
+            }
+            legs = item
+        case .weapon:
+            if let weaponItem = weapon {
+                allItems.append(weaponItem)
+            }
+            weapon = item
+        }
+        remove(item: item)
+    }
+    
+    func itemPath(for slot: ItemSlot) -> String? {
+        switch slot {
+        case .head:
+            head?.iconImagePath
+        case .torso:
+            torso?.iconImagePath
+        case .legs:
+            legs?.iconImagePath
+        case .weapon:
+            weapon?.iconImagePath
+        }
+    }
 }

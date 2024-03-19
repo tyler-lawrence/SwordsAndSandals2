@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InventoryIconCircleView: View {
-    
+    @Environment(GameCharacter.self) var player
     let size: CGFloat = 70
     let highlightScale: Double = 1.3
     var highlightSize: Double {
@@ -20,9 +20,12 @@ struct InventoryIconCircleView: View {
     }
     @State var degrees: Double = 360.0
     let itemShape = RoundedRectangle(cornerRadius: 10)
-    let itemSlot: ItemSlot?
-    @State var item: Item?
+    let itemSlot: ItemSlot
+//    @State var item: Item?
     @Binding var draggedItem: Item?
+    var imagePath: String {
+        player.inventory.itemPath(for: itemSlot) ?? ""
+    }
     
     var body: some View {
         ZStack{
@@ -45,15 +48,14 @@ struct InventoryIconCircleView: View {
                 .foregroundColor(color)
                 .frame(width: size, height: size)
                 .overlay{
-                    if let itemPath = item?.iconImagePath {
-                        Image(itemPath)
-                    }
+                    Image(imagePath)
                 }
         }
         .dropDestination(for: Item.self){ items, location in
             defer {draggedItem = nil}
-            guard items.first?.itemSlot == itemSlot else { return false }
-            item = items.first
+            guard let item = items.first else { return false }
+            guard item.itemSlot == itemSlot else { return false }
+            player.inventory.equip(item, at: itemSlot)
             return true
         }
     }
@@ -65,7 +67,9 @@ struct InventoryIconCircleView: View {
         ItemInventoryView(item: item)
             .draggable(item)
         InventoryIconCircleView(itemSlot: .weapon, draggedItem: .constant(item))
+            .environment(GameCharacter.sample)
         InventoryIconCircleView(itemSlot: .head, draggedItem: .constant(item))
+            .environment(GameCharacter.sample)
     }
 }
 
