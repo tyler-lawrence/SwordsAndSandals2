@@ -14,6 +14,7 @@ struct GameSelectionView: View {
     
     var body: some View {
         HStack {
+            // character list
             VStack{
                 List{
                     ForEach(appManager.gameManagers){ gameManager in
@@ -22,25 +23,28 @@ struct GameSelectionView: View {
                         }
                     }
                     .onDelete(perform: delete(at:))
-                    
+                    Button("New"){
+                        showingSheet.toggle()
+                    }
+                    .buttonStyle(.borderedProminent)
                 }
-                Button("New"){
-                    showingSheet.toggle()
-                }
-                .buttonStyle(.borderedProminent)
+                
             }
             
-            VStack{
-                Spacer()
-                if let character = appManager.selectedGame?.player {
+            // character view
+            if let character = appManager.selectedGame?.player {
+                VStack{
+                    Spacer()
+                    Text(character.name)
+                    Text("Level: \(character.level)")
                     CharacterView(character: character)
+                    Spacer()
+                    Button("Enter"){
+                        appManager.appState = .playing
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(appManager.selectedGame == nil)
                 }
-                Spacer()
-                Button("Enter"){
-                    appManager.appState = .playing
-                }
-                .buttonStyle(.borderedProminent)
-                .disabled(appManager.selectedGame == nil)
             }
         }
         .sheet(isPresented: $showingSheet){
