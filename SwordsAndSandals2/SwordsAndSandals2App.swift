@@ -14,8 +14,7 @@ struct SwordsAndSandals2App: App {
     @State private var appManager = AppManager()
     var body: some Scene {
         WindowGroup {
-            GameSelectionView()
-                .environment(appManager)
+            ViewNavigator(appManager: appManager)
                 .onChange(of: scenePhase){
                     appManager.save()
                 }

@@ -19,6 +19,7 @@ struct CombatView: View {
         case player
     }
     
+    @State var appManager: AppManager
     @Environment(GameManager.self) var gameManager
     @State var cm: CombatManager
     
@@ -82,7 +83,7 @@ struct CombatView: View {
                 PostCombatView(enemyName: cm.enemy.name)
                     .shadow(radius: 10)
             } else if cm.gameOver {
-                GameOverView(player: cm.player)
+                GameOverView(appManager: appManager, player: cm.player)
             }
         }
         .onReceive(timer){_ in
@@ -96,6 +97,5 @@ struct CombatView: View {
 }
 
 #Preview {
-    CombatView(cm: CombatManager.testCM)
-        .environment(GameManager.sample)
+    CombatView(appManager: AppManager.sample, cm: CombatManager.testCM)
 }

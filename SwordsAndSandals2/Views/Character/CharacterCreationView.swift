@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterCreationView: View {
     
-    @Environment(AppManager.self) var appManager
+    @State var appManager: AppManager
     @State var gameManager = GameManager()
     
     var body: some View {
@@ -23,18 +23,13 @@ struct CharacterCreationView: View {
             
             Spacer()
             
-            NavigationLink("Begin"){
-                ContentView()
-                    .environment(gameManager)
-                    .navigationBarBackButtonHidden()
-                    
+            Button("Begin"){
+                appManager.saveGame(gameManager)
+                appManager.selectedGame = gameManager
+                appManager.appState = .playing
             }
             .buttonStyle(.borderedProminent)
-            .simultaneousGesture(
-                TapGesture().onEnded{
-                    appManager.saveGame(gameManager)
-                }
-            )
+            .disabled(gameManager.player.skillPointsAvailable != 0)
         }
         .padding()
         .onAppear{
@@ -48,6 +43,5 @@ struct CharacterCreationView: View {
 }
 
 #Preview {
-    CharacterCreationView()
-        .environment(AppManager.sample)
+    CharacterCreationView(appManager: AppManager.sample)
 }

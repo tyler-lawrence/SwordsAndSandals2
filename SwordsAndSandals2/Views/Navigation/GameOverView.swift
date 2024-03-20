@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct GameOverView: View {
-    
+    @State var appManager: AppManager
     let player: GameCharacter
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @State private var frameSize: CGFloat = 1000
-    @State private var showingSummary = false
+    @State private var showingAlert = false
     
     var body: some View {
         ZStack {
@@ -29,20 +29,14 @@ struct GameOverView: View {
                 if frameSize > 5{
                     frameSize -= 3
                 } else {
-                    showingSummary = true
+                    showingAlert = true
                 }
             }
-            if showingSummary {
-                VStack {
-                    VStack{
-                        Text("Game Over")
-                        Text("You Lose")
-                    }
-                    .font(.largeTitle)
-                    .foregroundColor(.red)
-                    .padding()
-                    CharacterView(character: player)
-                        .deadCharacter()
+            .alert("gameOver", isPresented: $showingAlert){
+                Button("Play Again"){
+                    guard let currentGameManager = appManager.selectedGame else { return }
+                    appManager.remove(gameManager: currentGameManager)
+                    appManager.appState = .setup
                 }
             }
         }
@@ -54,5 +48,5 @@ struct GameOverView: View {
 }
 
 #Preview {
-    GameOverView(player: GameCharacter.sample)
+    GameOverView(appManager: AppManager.sample, player: GameCharacter.sample)
 }

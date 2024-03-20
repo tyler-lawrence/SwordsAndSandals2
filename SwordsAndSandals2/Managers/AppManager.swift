@@ -11,6 +11,8 @@ import Foundation
 final class AppManager {
     
     var gameManagers: [GameManager] = []
+    var selectedGame: GameManager?
+    var appState: AppState = .setup
     
     init(gameManagers: [GameManager]) {
         self.gameManagers = gameManagers
@@ -63,9 +65,10 @@ final class AppManager {
         gameManagers.firstIndex{$0.id == gameManager.id}
     }
     
-    func removeGame(_ gameManager: GameManager) {
+    func remove(gameManager: GameManager) {
         if let idx = idxForGame(gameManager) {
             gameManagers.remove(at: idx)
+            selectedGame = nil
         }
     }
     

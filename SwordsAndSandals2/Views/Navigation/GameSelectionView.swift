@@ -10,45 +10,61 @@ import SwiftUI
 struct GameSelectionView: View {
     
     @Environment(AppManager.self) var appManager
+    @State var showingSheet = false
     
     var body: some View {
-        NavigationStack {
-            List{
-                ForEach(appManager.gameManagers){ gameManager in
-                    NavigationLink(gameManager.player.name){
-                        ContentView()
-                            .environment(gameManager)
-                            .navigationBarBackButtonHidden()
-                    }
-                }
-                .onDelete(perform: delete(at:))
-
-            }
-                .toolbar{
-                    ToolbarItem{
-                        NavigationLink{
-                            CharacterCreationView()
-                        } label: {
-                            Image(systemName: "plus")
+        if appManager.gameManagers.isEmpty {
+            CharacterCreationView(appManager: appManager)
+        } else {
+            HStack {
+                // character list
+                VStack{
+                    List{
+                        ForEach(appManager.gameManagers){ gameManager in
+                            Button(gameManager.player.name){
+                                appManager.selectedGame = gameManager
+                            }
                         }
+                        .onDelete(perform: delete(at:))
+                        Button("New"){
+                            showingSheet.toggle()
+                        }
+                        .buttonStyle(.borderedProminent)
                     }
-                }
-                .overlay{
-                    if appManager.gameManagers.isEmpty {
-                        ContentUnavailableView("Press the + to add a new game", systemImage: "arrow.up.forward")
-                    }
+                    
                 }
                 
+                // character view
+                if let character = appManager.selectedGame?.player {
+                    VStack{
+                        Spacer()
+                        Text(character.name)
+                        Text("Level: \(character.level)")
+                        CharacterView(character: character)
+                        Spacer()
+                        Button("Enter"){
+                            appManager.appState = .playing
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .disabled(appManager.selectedGame == nil)
+                    }
+                }
             }
-            
-        }
-        
-        func delete(at offsets: IndexSet) {
-            appManager.remove(at: offsets)
+            .sheet(isPresented: $showingSheet){
+                CharacterCreationView(appManager: appManager)
+            }
         }
     }
     
-    #Preview {
-        GameSelectionView()
-            .environment(AppManager.sample)
+    
+    
+    
+    func delete(at offsets: IndexSet) {
+        appManager.remove(at: offsets)
     }
+}
+
+#Preview {
+    GameSelectionView()
+        .environment(AppManager.sample)
+}
