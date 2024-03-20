@@ -10,38 +10,47 @@ import SwiftUI
 struct GameSelectionView: View {
     
     @Environment(AppManager.self) var appManager
+    @State var showingSheet = false
     
     var body: some View {
-        NavigationStack {
-            List{
-                ForEach(appManager.gameManagers){ gameManager in
-                    NavigationLink(gameManager.player.name){
-                        ContentView()
-                            .environment(gameManager)
-                            .navigationBarBackButtonHidden()
+        HStack {
+            VStack{
+                List{
+                    ForEach(appManager.gameManagers){ gameManager in
+                        Button(gameManager.player.name){
+                            appManager.selectedGame = gameManager
+                        }
                     }
+                    .onDelete(perform: delete(at:))
+                    
                 }
-                .onDelete(perform: delete(at:))
-                
-            }
-            .toolbar{
-                ToolbarItem{
-                    NavigationLink{
-                        CharacterCreationView()
-                    } label: {
-                        Image(systemName: "plus")
-                    }
+                Button("New"){
+                    showingSheet.toggle()
                 }
-            }
-            .overlay{
-                if appManager.gameManagers.isEmpty {
-                    ContentUnavailableView("Press the + to add a new game", systemImage: "arrow.up.forward")
-                }
+                .buttonStyle(.borderedProminent)
             }
             
+            VStack{
+                Spacer()
+                if let character = appManager.selectedGame?.player {
+                    CharacterView(character: character)
+                }
+                Spacer()
+                Button("Enter"){
+                    appManager.appState = .playing
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(appManager.selectedGame == nil)
+            }
         }
-        
+        .sheet(isPresented: $showingSheet){
+            CharacterCreationView()
+                .environment(appManager)
+        }
     }
+    
+    
+    
     
     func delete(at offsets: IndexSet) {
         appManager.remove(at: offsets)

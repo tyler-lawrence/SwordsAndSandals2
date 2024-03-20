@@ -11,6 +11,8 @@ import Foundation
 final class AppManager {
     
     var gameManagers: [GameManager] = []
+    var selectedGame: GameManager?
+    var appState: AppState = .setup
     
     init(gameManagers: [GameManager]) {
         self.gameManagers = gameManagers

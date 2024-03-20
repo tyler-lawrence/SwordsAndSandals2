@@ -10,6 +10,8 @@
 		5B4D45D22BA9D1A200AB03D5 /* Item+Transferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D12BA9D1A200AB03D5 /* Item+Transferable.swift */; };
 		5B4D45D42BA9FE6900AB03D5 /* InventoryTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */; };
 		5B4D45D62BAA072600AB03D5 /* CombatTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D52BAA072600AB03D5 /* CombatTip.swift */; };
+		5B4D45E32BAB5FC400AB03D5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E22BAB5FC400AB03D5 /* AppState.swift */; };
+		5B4D45E52BAB5FFE00AB03D5 /* ViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */; };
 		5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DA2B24B62200B2848A /* StatsView.swift */; };
 		5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DC2B24B67D00B2848A /* StatStepperView.swift */; };
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
@@ -65,6 +67,8 @@
 		5B4D45D12BA9D1A200AB03D5 /* Item+Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Transferable.swift"; sourceTree = "<group>"; };
 		5B4D45D32BA9FE6900AB03D5 /* InventoryTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTip.swift; sourceTree = "<group>"; };
 		5B4D45D52BAA072600AB03D5 /* CombatTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatTip.swift; sourceTree = "<group>"; };
+		5B4D45E22BAB5FC400AB03D5 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNavigator.swift; sourceTree = "<group>"; };
 		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/Stats/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 			children = (
 				5B63282D2B24EB9B00B2848A /* ShopView.swift */,
 				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
+				5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */,
 				5B6327E02B24D05B00B2848A /* TownView.swift */,
 				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
 			);
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */,
+				5B4D45E22BAB5FC400AB03D5 /* AppState.swift */,
 				5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */,
 				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
 			);
@@ -395,6 +401,7 @@
 				5B4D45D62BAA072600AB03D5 /* CombatTip.swift in Sources */,
 				5B6328302B26B28D00B2848A /* ItemInventoryView.swift in Sources */,
 				5B6328102B24DEDC00B2848A /* PostCombatView.swift in Sources */,
+				5B4D45E52BAB5FFE00AB03D5 /* ViewNavigator.swift in Sources */,
 				5B63282A2B24EA2700B2848A /* ItemDetailsView.swift in Sources */,
 				5B6328072B24DDE600B2848A /* LivingCharacter.swift in Sources */,
 				5B6327EB2B24D80E00B2848A /* BackgroundAudio.swift in Sources */,
@@ -409,6 +416,7 @@
 				5B6327FD2B24DBB500B2848A /* CombatActionView.swift in Sources */,
 				5B95EDEC2B1FFF92002E7CD2 /* GameSelectionView.swift in Sources */,
 				5B63280A2B24DE2A00B2848A /* DeadCharacter.swift in Sources */,
+				5B4D45E32BAB5FC400AB03D5 /* AppState.swift in Sources */,
 				5B6328052B24DCC800B2848A /* CharacterCombatView.swift in Sources */,
 				5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */,
 				5B6328032B24DC8700B2848A /* DamageView.swift in Sources */,
