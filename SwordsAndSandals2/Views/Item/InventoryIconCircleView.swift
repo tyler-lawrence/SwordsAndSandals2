@@ -61,13 +61,11 @@ struct InventoryIconCircleView: View {
 }
 
 #Preview {
-    let item = Item.basicSword
     return VStack{
-        ItemInventoryView(item: item)
-            .draggable(item)
-        InventoryIconCircleView(itemSlot: .weapon, draggedItem: .constant(item))
+
+        InventoryIconCircleView(itemSlot: .weapon, draggedItem: .constant(Item.basicSword))
             .environment(GameCharacter.sample)
-        InventoryIconCircleView(itemSlot: .head, draggedItem: .constant(item))
+        InventoryIconCircleView(itemSlot: .head, draggedItem: .constant(Item.basicSword))
             .environment(GameCharacter.sample)
     }
 }
