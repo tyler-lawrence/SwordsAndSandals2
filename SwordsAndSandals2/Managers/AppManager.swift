@@ -63,7 +63,7 @@ final class AppManager {
         gameManagers.firstIndex{$0.id == gameManager.id}
     }
     
-    func removeGame(_ gameManager: GameManager) {
+    func remove(gameManager: GameManager) {
         if let idx = idxForGame(gameManager) {
             gameManagers.remove(at: idx)
         }
