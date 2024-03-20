@@ -58,6 +58,20 @@ final class AppManager {
             debugPrint(error)
         }
     }
+    
+    func idxForGame(_ gameManager: GameManager) -> Int? {
+        gameManagers.firstIndex{$0.id == gameManager.id}
+    }
+    
+    func removeGame(_ gameManager: GameManager) {
+        if let idx = idxForGame(gameManager) {
+            gameManagers.remove(at: idx)
+        }
+    }
+    
+    func remove(at offsets: IndexSet){
+        gameManagers.remove(atOffsets: offsets)
+    }
 }
 
 #if DEBUG
