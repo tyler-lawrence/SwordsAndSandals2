@@ -272,8 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				5B95EDE22B1FFDB1002E7CD2 /* AppManager.swift */,
-				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
 				5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */,
+				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
