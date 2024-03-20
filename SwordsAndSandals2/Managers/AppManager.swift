@@ -68,6 +68,7 @@ final class AppManager {
     func remove(gameManager: GameManager) {
         if let idx = idxForGame(gameManager) {
             gameManagers.remove(at: idx)
+            selectedGame = nil
         }
     }
     

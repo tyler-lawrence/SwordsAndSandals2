@@ -158,7 +158,6 @@
 		5B6328192B24E39D00B2848A /* Combat */ = {
 			isa = PBXGroup;
 			children = (
-				5B6328112B24DF2E00B2848A /* GameOverView.swift */,
 				5B63280D2B24DEBB00B2848A /* CombatView.swift */,
 				5B63280F2B24DEDC00B2848A /* PostCombatView.swift */,
 				5B6328002B24DC3300B2848A /* HealthBarView.swift */,
@@ -210,6 +209,7 @@
 				5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */,
 				5B6327E02B24D05B00B2848A /* TownView.swift */,
 				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
+				5B6328112B24DF2E00B2848A /* GameOverView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";

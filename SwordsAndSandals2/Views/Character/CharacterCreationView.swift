@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterCreationView: View {
     
-    @Environment(AppManager.self) var appManager
+    @State var appManager: AppManager
     @State var gameManager = GameManager()
     
     var body: some View {
@@ -43,6 +43,5 @@ struct CharacterCreationView: View {
 }
 
 #Preview {
-    CharacterCreationView()
-        .environment(AppManager.sample)
+    CharacterCreationView(appManager: AppManager.sample)
 }

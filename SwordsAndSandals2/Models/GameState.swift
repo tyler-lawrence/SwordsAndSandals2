@@ -14,4 +14,5 @@ enum GameState: Codable {
     case shop
     case levelUp
     case transition
+    case gameOver
 }

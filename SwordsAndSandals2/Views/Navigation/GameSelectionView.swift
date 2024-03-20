@@ -13,43 +13,46 @@ struct GameSelectionView: View {
     @State var showingSheet = false
     
     var body: some View {
-        HStack {
-            // character list
-            VStack{
-                List{
-                    ForEach(appManager.gameManagers){ gameManager in
-                        Button(gameManager.player.name){
-                            appManager.selectedGame = gameManager
+        if appManager.gameManagers.isEmpty {
+            CharacterCreationView(appManager: appManager)
+        } else {
+            HStack {
+                // character list
+                VStack{
+                    List{
+                        ForEach(appManager.gameManagers){ gameManager in
+                            Button(gameManager.player.name){
+                                appManager.selectedGame = gameManager
+                            }
                         }
+                        .onDelete(perform: delete(at:))
+                        Button("New"){
+                            showingSheet.toggle()
+                        }
+                        .buttonStyle(.borderedProminent)
                     }
-                    .onDelete(perform: delete(at:))
-                    Button("New"){
-                        showingSheet.toggle()
-                    }
-                    .buttonStyle(.borderedProminent)
+                    
                 }
                 
-            }
-            
-            // character view
-            if let character = appManager.selectedGame?.player {
-                VStack{
-                    Spacer()
-                    Text(character.name)
-                    Text("Level: \(character.level)")
-                    CharacterView(character: character)
-                    Spacer()
-                    Button("Enter"){
-                        appManager.appState = .playing
+                // character view
+                if let character = appManager.selectedGame?.player {
+                    VStack{
+                        Spacer()
+                        Text(character.name)
+                        Text("Level: \(character.level)")
+                        CharacterView(character: character)
+                        Spacer()
+                        Button("Enter"){
+                            appManager.appState = .playing
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .disabled(appManager.selectedGame == nil)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .disabled(appManager.selectedGame == nil)
                 }
             }
-        }
-        .sheet(isPresented: $showingSheet){
-            CharacterCreationView()
-                .environment(appManager)
+            .sheet(isPresented: $showingSheet){
+                CharacterCreationView(appManager: appManager)
+            }
         }
     }
     

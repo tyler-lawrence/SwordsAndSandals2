@@ -15,7 +15,7 @@ struct ViewNavigator: View {
             GameSelectionView()
                 .environment(appManager)
         case .playing:
-            ContentView()
+            ContentView(appManager: appManager)
                 .environment(appManager.selectedGame)
         }
     }
