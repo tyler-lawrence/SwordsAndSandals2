@@ -25,6 +25,7 @@ struct SwordsAndSandals2App: App {
                         .datastoreLocation(.applicationDefault)
                     ])
                 }
+                .statusBarHidden()
         }
     }
 }
