@@ -12,6 +12,8 @@
 		5B4D45D62BAA072600AB03D5 /* CombatTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45D52BAA072600AB03D5 /* CombatTip.swift */; };
 		5B4D45E32BAB5FC400AB03D5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E22BAB5FC400AB03D5 /* AppState.swift */; };
 		5B4D45E52BAB5FFE00AB03D5 /* ViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */; };
+		5B4D45E72BACAFB600AB03D5 /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E62BACAFB600AB03D5 /* BuildingView.swift */; };
+		5B4D45E92BACB21000AB03D5 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E82BACB21000AB03D5 /* Building.swift */; };
 		5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DA2B24B62200B2848A /* StatsView.swift */; };
 		5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DC2B24B67D00B2848A /* StatStepperView.swift */; };
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
@@ -69,6 +71,8 @@
 		5B4D45D52BAA072600AB03D5 /* CombatTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatTip.swift; sourceTree = "<group>"; };
 		5B4D45E22BAB5FC400AB03D5 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNavigator.swift; sourceTree = "<group>"; };
+		5B4D45E62BACAFB600AB03D5 /* BuildingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
+		5B4D45E82BACB21000AB03D5 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/Stats/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				5B95EDD52B1FFD66002E7CD2 /* ContentView.swift */,
 				5B4D45E42BAB5FFE00AB03D5 /* ViewNavigator.swift */,
 				5B6327E02B24D05B00B2848A /* TownView.swift */,
+				5B4D45E62BACAFB600AB03D5 /* BuildingView.swift */,
 				5B95EDEB2B1FFF92002E7CD2 /* GameSelectionView.swift */,
 				5B6328112B24DF2E00B2848A /* GameOverView.swift */,
 			);
@@ -311,6 +316,7 @@
 				5B6328242B24E78900B2848A /* Inventory.swift */,
 				5B6328222B24E70B00B2848A /* ItemSlot.swift */,
 				5B63282B2B24EB2300B2848A /* Shop.swift */,
+				5B4D45E82BACB21000AB03D5 /* Building.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				5B95EDE82B1FFE75002E7CD2 /* GameCharacter.swift in Sources */,
 				5B6327E92B24D54000B2848A /* PlayerDetailsView.swift in Sources */,
 				5B95EDEA2B1FFECC002E7CD2 /* StatType.swift in Sources */,
+				5B4D45E92BACB21000AB03D5 /* Building.swift in Sources */,
 				5B6328182B24E19700B2848A /* TransitionView.swift in Sources */,
 				5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */,
 				5B95EDE32B1FFDB1002E7CD2 /* AppManager.swift in Sources */,
@@ -404,6 +411,7 @@
 				5B4D45E52BAB5FFE00AB03D5 /* ViewNavigator.swift in Sources */,
 				5B63282A2B24EA2700B2848A /* ItemDetailsView.swift in Sources */,
 				5B6328072B24DDE600B2848A /* LivingCharacter.swift in Sources */,
+				5B4D45E72BACAFB600AB03D5 /* BuildingView.swift in Sources */,
 				5B6327EB2B24D80E00B2848A /* BackgroundAudio.swift in Sources */,
 				5B6328232B24E70B00B2848A /* ItemSlot.swift in Sources */,
 				5B6328142B24E03300B2848A /* LevelUpView.swift in Sources */,

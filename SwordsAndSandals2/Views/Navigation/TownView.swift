@@ -14,35 +14,36 @@ struct TownView: View {
         gameManager.player
     }
     var body: some View {
-        VStack{
-            HStack {
-                Button{
-                    showingPlayerDetailsSheet.toggle()
-                } label: {
-                    PlayerSummaryView()
-                        .environment(player)
+        ZStack {
+            Image(.town1)
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            VStack{
+                HStack {
+                    Button{
+                        showingPlayerDetailsSheet.toggle()
+                    } label: {
+                        PlayerSummaryView()
+                            .environment(player)
+                    }
+                    Spacer()
+                }
+                BuildingView(destination: .transition, buildingImagePath: "Town1Boss")
+                Spacer()
+                HStack{
+                    BuildingView(destination: .shop, buildingImagePath: "Town1Hut")
+                        .environment(gameManager)
+                    BuildingView(destination: .combat(gameManager.newWeakCharacter()), buildingImagePath: "Town1Training")
+                        .environment(gameManager)
                 }
                 Spacer()
+
             }
-            Spacer()
-            Button{
-                let enemy = gameManager.newWeakCharacter()
-                gameManager.gameState = .combat(enemy)
-            } label: {
-                Text("Combat")
-            }
-            .buttonStyle(.borderedProminent)
-            Button{
-                gameManager.gameState = .shop
-            } label: {
-                Text("Shop")
-            }
-            .buttonStyle(.borderedProminent)
-            Spacer()
+            .sheet(isPresented: $showingPlayerDetailsSheet){
+                PlayerDetailsView()
+                    .environment(player)
         }
-        .sheet(isPresented: $showingPlayerDetailsSheet){
-            PlayerDetailsView()
-                .environment(player)
         }
     }
 }
