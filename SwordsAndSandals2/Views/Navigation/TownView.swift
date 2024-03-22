@@ -29,6 +29,7 @@ struct TownView: View {
                     }
                     Spacer()
                 }
+                BuildingView(destination: .transition, buildingImagePath: "Town1Boss")
                 Spacer()
                 HStack{
                     BuildingView(destination: .shop, buildingImagePath: "Town1Hut")
