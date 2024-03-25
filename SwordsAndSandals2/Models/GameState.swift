@@ -9,8 +9,9 @@ import Foundation
 
 enum GameState: Codable {
     case tutorial
-    case combat(GameCharacter)
-    case main
+    case training(GameCharacter)
+    case boss(GameCharacter)
+    case town
     case shop
     case healer
     case levelUp

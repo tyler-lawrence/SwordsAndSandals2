@@ -29,14 +29,15 @@ struct TownView: View {
                     }
                     Spacer()
                 }
-                BuildingView(destination: .transition, buildingImagePath: "Town1Boss")
+                #warning("update boss destination with a real boss")
+                BuildingView(destination: .boss(gameManager.newWeakCharacter()), buildingImagePath: "Town1Boss")
                 Spacer()
                 BuildingView(destination: .healer, buildingImagePath: "Town1Tent")
                 Spacer()
                 HStack{
                     BuildingView(destination: .shop, buildingImagePath: "Town1Hut")
                         .environment(gameManager)
-                    BuildingView(destination: .combat(gameManager.newWeakCharacter()), buildingImagePath: "Town1Training")
+                    BuildingView(destination: .training(gameManager.newWeakCharacter()), buildingImagePath: "Town1Training")
                         .environment(gameManager)
                 }
                 Spacer()

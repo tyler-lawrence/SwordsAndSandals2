@@ -16,6 +16,7 @@
 		5B4D45E92BACB21000AB03D5 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45E82BACB21000AB03D5 /* Building.swift */; };
 		5B4D45EB2BB1B73800AB03D5 /* HealerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45EA2BB1B73800AB03D5 /* HealerView.swift */; };
 		5B4D45ED2BB1D22D00AB03D5 /* HealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45EC2BB1D22D00AB03D5 /* HealButton.swift */; };
+		5B4D45EF2BB1F04900AB03D5 /* CombatResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D45EE2BB1F04900AB03D5 /* CombatResult.swift */; };
 		5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DA2B24B62200B2848A /* StatsView.swift */; };
 		5B6327DD2B24B67D00B2848A /* StatStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DC2B24B67D00B2848A /* StatStepperView.swift */; };
 		5B6327DF2B24B71300B2848A /* StatManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6327DE2B24B71300B2848A /* StatManagerView.swift */; };
@@ -77,6 +78,7 @@
 		5B4D45E82BACB21000AB03D5 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		5B4D45EA2BB1B73800AB03D5 /* HealerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealerView.swift; sourceTree = "<group>"; };
 		5B4D45EC2BB1D22D00AB03D5 /* HealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealButton.swift; sourceTree = "<group>"; };
+		5B4D45EE2BB1F04900AB03D5 /* CombatResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CombatResult.swift; path = SwordsAndSandals2/Models/CombatResult.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DA2B24B62200B2848A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsView.swift; path = SwordsAndSandals2/Views/Stats/StatsView.swift; sourceTree = SOURCE_ROOT; };
 		5B6327DC2B24B67D00B2848A /* StatStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatStepperView.swift; sourceTree = "<group>"; };
 		5B6327DE2B24B71300B2848A /* StatManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatManagerView.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				5B4D45E22BAB5FC400AB03D5 /* AppState.swift */,
 				5B95EDE42B1FFDE8002E7CD2 /* GameManager.swift */,
 				5B6327F82B24DA9000B2848A /* CombatManager.swift */,
+				5B4D45EE2BB1F04900AB03D5 /* CombatResult.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				5B6327DB2B24B62200B2848A /* StatsView.swift in Sources */,
 				5B63280E2B24DEBB00B2848A /* CombatView.swift in Sources */,
 				5B6327E12B24D05B00B2848A /* TownView.swift in Sources */,
+				5B4D45EF2BB1F04900AB03D5 /* CombatResult.swift in Sources */,
 				5B95EDEE2B2000E3002E7CD2 /* GameState.swift in Sources */,
 				5B6327E52B24D2F000B2848A /* CharacterView.swift in Sources */,
 				5B95EDD62B1FFD66002E7CD2 /* ContentView.swift in Sources */,

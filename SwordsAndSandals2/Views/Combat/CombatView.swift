@@ -79,11 +79,13 @@ struct CombatView: View {
                 .padding()
                 Spacer()
             }
-            if cm.roundOver {
-                PostCombatView(enemyName: cm.enemy.name)
-                    .shadow(radius: 10)
-            } else if cm.gameOver {
+            if cm.gameOver {
                 GameOverView(appManager: appManager, player: cm.player)
+            }
+            if cm.roundOver {
+                if let combatResult = cm.result {
+                    PostCombatView(result: combatResult, enemyName: cm.enemy.name)
+                }
             }
         }
         .onReceive(timer){_ in

@@ -19,10 +19,16 @@ struct ContentView: View {
     var body: some View {
         switch gameManager.gameState {
         case .tutorial:
-            CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: GameCharacter.prisoner))
-        case .combat(let enemy):
-            CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: enemy))
-        case .main:
+            CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: GameCharacter.prisoner, bossCombat: false))
+        case .training(let enemy):
+            CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: enemy, bossCombat: false))
+                .onDisappear{
+                    player.currentHealth = max(2, player.currentHealth)
+                }
+        case .boss(let enemy):
+            #warning("update with real boss")
+            CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: enemy, bossCombat: true))
+        case .town:
             TownView()
         case .healer:
             HealerView(player: player)
