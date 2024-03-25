@@ -29,8 +29,21 @@ struct TownView: View {
                     }
                     Spacer()
                 }
-                #warning("update boss destination with a real boss")
-                BuildingView(destination: .boss(gameManager.newWeakCharacter()), buildingImagePath: "Town1Boss")
+                BuildingView(destination: .boss(GameCharacter.boss1), buildingImagePath: "Town1Boss")
+                    .overlay{
+                        if player.level < 4 {
+                            RoundedRectangle(cornerRadius: 15.0)
+                                .foregroundStyle(.white)
+                                .opacity(0.8)
+                                .overlay{
+                                    Image(systemName: "lock.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding()
+                                        .foregroundStyle(.black)
+                                }
+                        }
+                    }
                 Spacer()
                 BuildingView(destination: .healer, buildingImagePath: "Town1Tent")
                 Spacer()

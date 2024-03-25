@@ -40,14 +40,13 @@ extension GameCharacter {
     )
     
     static let boss1 = GameCharacter(
-        name: "Local Tough Guy",
+        name: "Big Billy",
         maxHealth: 15,
         stats: [
-            .strength: 3,
+            .strength: 6,
             .agility: 1,
-            .magic: 1,
-            .armor: 2
+            .magic: 1
         ],
-        inventory: Inventory()
+        inventory: Inventory(head: Item.helmet, torso: nil, legs: nil, weapon: Item.dagger, allItems: [])
     )
 }
