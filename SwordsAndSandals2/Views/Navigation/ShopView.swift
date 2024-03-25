@@ -22,7 +22,7 @@ struct ShopView: View {
         VStack{
             HStack{
                 Button("Leave"){
-                    gameManager.gameState = .main
+                    gameManager.gameState = .town
                 }
                 Spacer()
                 Text("\(gameManager.player.gold) 💰")

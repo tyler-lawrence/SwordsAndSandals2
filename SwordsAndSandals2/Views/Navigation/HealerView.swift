@@ -22,7 +22,7 @@ struct HealerView: View {
             .padding(.bottom)
             
             Button("return to town"){
-                gameManager.gameState = .main
+                gameManager.gameState = .town
             }
             .buttonStyle(.borderedProminent)
         }

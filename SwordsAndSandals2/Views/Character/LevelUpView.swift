@@ -20,7 +20,7 @@ struct LevelUpView: View {
                 CharacterView(character: gameManager.player)
                 StatManagerView(player: $gameManager.player)
                 Button("Enter Town"){
-                    gameManager.gameState = .main
+                    gameManager.gameState = .town
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled(gameManager.player.skillPointsAvailable != 0)

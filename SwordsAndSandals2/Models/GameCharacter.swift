@@ -115,7 +115,7 @@ final class GameCharacter: Codable {
         let damageModifier: Double = combatAction.damageModifier
         let premitigationDamage: Double = Double(attackPower) * damageModifier
         let totalDamage: Int = max(0, Int(premitigationDamage) - enemyDefense)
-        enemy.currentHealth -= totalDamage
+//        enemy.currentHealth -= totalDamage
         return totalDamage
     }
     

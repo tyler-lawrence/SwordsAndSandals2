@@ -28,7 +28,7 @@ struct TransitionView: View {
             if frameSize < 1000 {
                 frameSize += 9
             } else {
-                gameManager.gameState = .main
+                gameManager.gameState = .town
             }
             
         }
