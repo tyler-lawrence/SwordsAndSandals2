@@ -26,7 +26,6 @@ struct ContentView: View {
                     player.currentHealth = max(2, player.currentHealth)
                 }
         case .boss(let enemy):
-            #warning("update with real boss")
             CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: enemy, bossCombat: true))
         case .town:
             TownView()

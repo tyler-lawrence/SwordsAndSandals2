@@ -10,6 +10,7 @@ import SwiftUI
 struct TownView: View {
     @Environment(GameManager.self) var gameManager
     @State private var showingPlayerDetailsSheet = false
+    @State private var showingBossLockAlert = false
     var player: GameCharacter {
         gameManager.player
     }
@@ -29,8 +30,28 @@ struct TownView: View {
                     }
                     Spacer()
                 }
-                #warning("update boss destination with a real boss")
-                BuildingView(destination: .boss(gameManager.newWeakCharacter()), buildingImagePath: "Town1Boss")
+                BuildingView(destination: .boss(GameCharacter.boss1), buildingImagePath: "Town1Boss")
+                    .overlay{
+                        if player.level < 4 {
+                            Button{
+                                showingBossLockAlert = true
+                            } label: {
+                                RoundedRectangle(cornerRadius: 15.0)
+                                    .foregroundStyle(Material.thin)
+                                    .opacity(0.8)
+                                    .blur(radius: 2)
+                                    .overlay{
+                                        Image(systemName: "lock.fill")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .padding()
+                                            .foregroundStyle(.black)
+                                            .shadow(color: .yellow, radius: 3.0)
+                                    }
+                            }
+                            
+                        }
+                    }
                 Spacer()
                 BuildingView(destination: .healer, buildingImagePath: "Town1Tent")
                 Spacer()
@@ -47,6 +68,9 @@ struct TownView: View {
                 PlayerDetailsView()
                     .environment(player)
         }
+        }
+        .alert("You are not high enough level", isPresented: $showingBossLockAlert){
+            Button("OK, I will get stronger", role: .cancel){}
         }
     }
 }
