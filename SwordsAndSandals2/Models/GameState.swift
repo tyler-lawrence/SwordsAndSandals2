@@ -12,6 +12,7 @@ enum GameState: Codable {
     case combat(GameCharacter)
     case main
     case shop
+    case healer
     case levelUp
     case transition
     case gameOver

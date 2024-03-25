@@ -24,6 +24,9 @@ struct ContentView: View {
             CombatView(appManager: appManager, cm: CombatManager(player: player, enemy: enemy))
         case .main:
             TownView()
+        case .healer:
+            HealerView(player: player)
+                .environment(gameManager)
         case .shop:
             ShopView()
         case .levelUp:
