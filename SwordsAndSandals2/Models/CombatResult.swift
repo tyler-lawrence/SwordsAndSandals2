@@ -17,7 +17,7 @@ enum CombatResult: String {
         case .victory:
             "You defeated "
         case .defeat:
-            "After your loss you return to town with 2 health"
+            "You return to town with 2 health after your loss against "
         }
     }
     
