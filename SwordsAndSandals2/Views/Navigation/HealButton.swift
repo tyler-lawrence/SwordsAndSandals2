@@ -11,14 +11,14 @@ struct HealButton: View {
     
     @Environment(GameCharacter.self) var player
     let buttonSize: CGFloat = 100.0
-    let service: Service
+    let service: HealerService
     @State var showingAlert: Bool = false
     
     var alertMessage: String {
         "Buy \(service.rawValue) for 💰\(service.cost)?"
     }
     
-    enum Service: String {
+    enum HealerService: String {
         case full = "full heal"
         case five = "+5 health"
         
